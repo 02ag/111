@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遍历数组2</title>
+</head>
+<body>
+    <p>
+        循环：一次又一次的执行循环体内的语句，直到条件语句不成立。
+        递归：一次又一次的执行（调用它自己）
+    </p>
+    <script>
+        // 递归
+        /*function fun1(i){
+            if(i<10){
+                console.log(i);
+                //为什么不用i++
+                // i++先赋值后+1，
+                // ++i,先+1再赋值
+                fun1(++i);
+            }
+        }
+        fun1(0);*/
+        // var 用来声明变量
+        // function用来声明（定义）一个函数
+
+        /*for(var i = 0; i<10; ++i){
+            console.log(i);
+        }*/
+
+        // 假设有一个数组，有三个元素，每个元素又是一个数组，多维数组。
+        var arr = [[1],[1,2],[1,2,3]];
+        // for(var i = 0; i < arr.length; i++) {
+        //     var ele = arr[i];
+        //     // console.log(ele);
+        //     for(var j = 0; j < ele.length; j++){
+        //         console.log(ele[j]);
+        //     }
+        // }
+        var i = 0,
+            ele;
+        // if(i == 0){
+            console.log('当ele是第一个元素的时候'); 
+            ele = arr[0];
+            // ele = [1]
+            for(var j = 0; j < ele.length; j++){
+                console.log(ele[j]);
+            }
+        // } else if(i == 1) {
+            console.log('当ele是第二个元素的时候'); 
+            ele = arr[1];
+            // ele = [1,2]
+            for(var m = 0; m < ele.length; m++ ){
+                console.log(ele[m]);
+            }
+        // } else if(i == 2) {、
+            console.log('当ele是第三个元素的时候'); 
+            ele = arr[2];
+            // ele = [1,2,3]
+            for(var n = 0; n < ele.length; n++) {
+                console.log(ele[n]);
+            }
+        // }
+
+
+
+    </script>
+</body>
+</html>

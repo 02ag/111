@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch语句</title>
+</head>
+<body>
+    <!-- switch语句：分支语句
+        关键字：switch，case,break,default
+        语法：
+        switch (key) {
+            case value:
+                语句;
+            case value1:
+                语句;
+                break;(截断判断语句，不再继续执行。)
+            case val2:
+                语句;
+            ...
+            default: (默认前面的case语句都不匹配时，执行这里的语句)
+                语句;
+
+        }
+        注意：如果没有break语句，语句恰好匹配到的语句，后面的所有语句无条件执行。所以，请务必带上break。
+    -->
+    <script>
+        var key = prompt('请输入整十数：');
+        switch(key) {
+            case '10':
+                console.log('您输入的是10');
+                break;
+            case '20':
+                console.log('您输入的是20');
+                break;
+            case '30':
+                console.log('您输入的是30');
+                break;
+            case '40':
+                console.log('您输入的是40');
+                break;
+            case '50':
+                console.log('您输入的是50');
+                break;
+            case '60':
+                console.log('您输入的是60');
+                break;
+            case '70':
+                console.log('您输入的是70');
+                break;
+            case '80':
+                console.log('您输入的是80');
+                break;
+            case '90':
+                console.log('您输入的是90');
+                break;
+            default:
+                console.log('您输入的不是整十数！')
+        }
+    </script>
+</body>
+</html>

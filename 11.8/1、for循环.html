@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for循环</title>
+</head>
+<body>
+    <script>
+        // 以下代码用来演示调试工具
+        // 定义一个函数,参数是形参
+        // 一个函数，没有调用就不会执行
+        // function add(x,y){
+        //     console.log('abc');
+        //     return x + y;
+        // }
+        // // 调用函数的时候，是实参
+        // var result = add(3,4);
+        // console.log(result);
+
+        // for就是定义循环的关键字
+        // 语法：
+        // 小括号中有三部分:
+        // var index=0; 初始化语句，只执行一次，第一次循环的时候执行
+        // index<3; 判断语句；
+        // index++; 累加/累减 语句
+        // 花括号{}中： 循环体。循环每执行一次，循环体里的语句就会执行一次
+        for(var index = 0; index < 3; index++){
+            console.log(index);
+        }
+
+        /*
+        for循环的执行顺序：
+        1、index=0，先执行【初始化语句】，再执行判断语句，判断语句成立，执行循环体，执行累加（累减）语句；
+        2、index=1，执行判断语句，判断语句成立，执行循环体，然后再执行累加（累减）语句；
+        3、index=2，执行判断语句，判断语句成立，执行循环体，然后再执行累加（累减）语句；
+        4、index=3，执行判断语句，判断语句不成立，循环体不再执行。
+        循环结束。
+        
+        */ 
+        for(var index = 3; index > 0; index--){
+            console.log(index);
+        }
+
+    </script>
+</body>
+</html>

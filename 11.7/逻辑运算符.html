@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逻辑运算符</title>
+</head>
+<body>
+    <!-- 逻辑运算符（与或非 &&、||、 !） 
+    
+        与&&： true&&true  //true
+            false && true  //false
+            true && false //false
+            false && false //false
+
+        或||：true||true  //true
+            true || false  //true
+            false || false // false
+            false || true  //true
+        非!:!true === false  !false === true
+        如果值不是布尔值，都会隐式转换为布尔值。先判断，然后返回对应的隐式转换前的值。
+    -->
+    <script>
+        // 声明并初始化两个变量
+        var x = 5,y = 10;
+        console.log(x==5 && y==11); //false
+        console.log(x==5 && y==10); //true
+
+        console.log(x==5 || y==11); //true
+
+        console.log(!(x==5)); //false
+
+        var sex = '男';
+        console.log(sex && !true || x==5); 
+        //只要变量值不是'',null,0,undefined,false,其他值都返回true
+        console.log(sex && true);
+        // 对于多级的逻辑运算，只要没有括号，就是从左到右进行运算；如果有括号，就先算括号里的
+        if(sex && false || x==6){
+            console.log('不是男性');
+        } else {
+            console.log('进入else');
+        }
+    </script>
+</body>
+</html>

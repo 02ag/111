@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>比较运算符</title>
+</head>
+<body>
+    <!-- 
+        关系运算符，又叫比较运算符。（<,>,>=,<=,==,===）
+
+        ===与==的区别。
+    -->
+    <script>
+        // 1、数字类型相比较就是数字的大小值比较，
+        console.log(10>9);
+        console.log(9>10);
+        // 2、字符串的比较，需要转为ASCII码值按位比较
+        // 从字符串的第一位开始比较，第一位ASCII码值大的字符串就大；如果第一位相等，再接着比较第二位，第二位码值大的字符串就大，如果相等，继续比较第三位...
+        console.log('2'>'1'); //true
+        console.log('20'>'111'); //true
+        console.log('a' > 'A'); //true
+        console.log('abcde'> 'Abcdefg'); // true
+        // 3、undefined和null与其他值无法比较，结果都是false
+        console.log(undefined == null); //true
+        console.log(undefined == ''); //false
+        console.log(undefined == false); //false
+        console.log(undefined == 0); //false
+        console.log(null == false); //false
+        console.log(false == 0); //true
+        console.log(null == 0); //false
+        console.log(null == ''); //false
+        // 4、==，===
+        // 当两个不同类型（五种基本类型）的数据，用==比较，会隐式转换（一般会转换成数值），然后再进行比较。
+        // ===，不进行隐式转换，只有数据的值和类型完全相同才可以是true
+        console.log(false == 0); //true
+        console.log(false === 0);//false
+
+        // 5、非数值永远不相等
+        // 6、b=isNaN();判断括号内是不是数值；如果b是true则说明括号内的就不是数值，false就是数值。
+
+
+        // ==和===判断步骤：简单讲==代表相同，===代表严格相同
+        // ==，先检查两个操作数的类型，如果相同，就进行比较；如果不同，就转换类型进行比较
+        // ===，先检查两个操作数的类型，如果不同，直接就是false；如果相同，再进行比较。
+
+    </script>
+</body>
+</html>

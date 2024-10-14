@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一元运算符</title>
+</head>
+<body>
+    <!-- 
+        一元运算符： a++, ++a; a--, --a; ++就是+1，--就是-1。
+        b = a++; 运算过程：先把a的值赋值给b，然后把a = a+1;
+        b = ++a; 运算过程：先给a = a + 1;然后把a的值赋值给b
+        变量在前，就先赋值，+号在前就
+    -->
+
+    <!-- 
+        补充一个概念：变量提升。
+     -->
+    
+    <script>
+        var a = 20, b, c;
+        b = a++ + ++a; 
+        console.log(b);
+        // b = m(a++) + n(++a);  
+        // m = a++; m=20;a=a+1,a=21;
+        // n = ++a; a = a+1,a = 22; n=22;
+        // b = m + n = 20 + 22=42
+        c = ++a - a++;
+        // c = j - i; 
+        // j=++a; a=a+1=23; j = 23;
+        // i=a++; i=a=23; a=a+1=24;
+        // c = j - i=23-23=0
+        var d = a++ + a++; //49
+        // a = 26;
+        var e = ++a + ++a; //55
+        console.log(d)
+        console.log(e) 
+
+        // 运算过程： b 
+
+
+        // 求b 和 c；
+
+
+        
+        // console.log(a);
+        // 变量提升：先使用，后定义（声明）；
+        // 变量提升：把变量的声明部分提升到了使用之前
+        // console.log(y);
+        // var y = 10;
+        // 另外两种声明变量的关键词：let const
+        // 相当于
+        // var y; 变量的声明
+        // console.log(y);
+        // y = 10; 变量的初始化（第一次赋值）
+        // console.log(z); //如果一个变量没有声明直接使用，会报错：提示未定义。
+    </script>
+</body>
+</html>

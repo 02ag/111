@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三目运算符</title>
+</head>
+<body>
+    <!-- 三目运算符，又叫条件运算符
+        语法： 条件? 值1 ：值2
+        如果值是true，就返回值1给前面的变量，否则就返回值2给前面的变量。
+        
+    -->
+    <script>
+        var a = 5;
+        var b = a>0 ? 5:10; 
+        // 上面这个式可以解释为：
+        // if(a>0){
+        //     b = 5;
+        // } else {
+        //     b = 10
+        // }
+        console.log(b);
+        var sex = '男';
+        var val = (sex || a==6) ? '男' : '女';
+        console.log(val);
+    </script>
+</body>
+</html>

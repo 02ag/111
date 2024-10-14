@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js写表格</title>
+    <style>
+        table{
+            margin:50px auto;
+            width: 500px;
+        }
+        table,td,th{
+            border: 1px solid red;
+            /* collapse(合并)|separat(分离) */
+            border-collapse:collapse;
+        }
+        th,td{
+            text-align: center;
+            line-height: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+        var str = '<table><tr><th>学号</th><th>姓名</th><th>年龄</th><th>姓别</th></tr><tr><td>1</td><td>张三</td><td>21</td><td>男</td></tr><tr><td>1</td><td>李丽</td><td>31</td><td>女</td></tr></table>';
+        // 第一种写法：
+        document.write('<table>');
+        document.write('<tr>');
+        document.write('<th>学号</th><th>姓名</th><th>年龄</th><th>姓别</th>');
+        document.write('</tr>');
+        document.write('<tr>');
+        document.write('<td>1</td><td>张三</td><td>21</td><td>男</td>');
+        document.write('</tr>');        
+        document.write('<tr>');
+        document.write('<td>1</td><td>李丽</td><td>31</td><td>女</td>');
+        document.write('</tr>');
+        document.write('</table>');
+
+        // 第二种写法：
+        document.write('<table><tr><th>学号</th><th>姓名</th><th>年龄</th><th>姓别</th></tr><tr><td>1</td><td>张三</td><td>21</td><td>男</td></tr><tr><td>1</td><td>李丽</td><td>31</td><td>女</td></tr></table>');
+
+        // 第三种写法：模版字符串
+        document.write(`
+            <table>
+                <tr>
+                    <th>学号</th><th>姓名</th><th>年龄</th><th>姓别</th>
+                </tr>
+                <tr>
+                    <td>1</td><td>张三</td><td>21</td><td>男</td>
+                </tr>
+                <tr>
+                    <td>1</td><td>李丽</td><td>31</td><td>女</td>
+                </tr>
+            </table>
+        `);
+        document.write(str);
+
+        document.write('第一个输出');
+        document.write('第二个输出');
+        document.writeln('第三个输出');
+        document.writeln('第四个输出');
+    </script>
+    <span>第一个span</span><span>第二个span</span>
+    <span>第三个span</span>
+</body>
+</html>

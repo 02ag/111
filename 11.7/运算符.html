@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>算术运算符</title>
+</head>
+<body>
+    <!-- 
+        算术运算符（+，-，*，/，%）
+        +：第一个意思就是正常的数值相加； 第二个意思就是连接字符（串）
+            加号遇到字符（串），大家都变字符（串）；
+
+     -->
+    <script>
+        // 当你想要同时声明几个变量的时候，可以只写一个var用,（英文逗号）分隔多个变量，最后写一个分号就行了；
+        var a = '1',
+            b=2,
+            c=a+b;
+            // 当字符与数值相加时，边接符会把数值隐式转换为字符进行运算；把字符与字符拼接在一起
+        console.log(c);
+
+
+        var d = '1',
+            e = 'a';
+        console.log(d+e);
+
+        // 非字符相加，会隐式转换成为数值进行【运算】
+        var s = true, p = false, cc = s + p;
+        // true --> 1, false --> 0;
+        console.log(cc);
+
+        // -,*,/,%,都是隐式转换成数值运算
+        var a1 = '1',
+            b1 = '2';
+        console.log(b1-a1);
+        // typeof() 用来查看基本（简单）数据类型：number，string，boolean,undefined, null(空对象)
+        console.log(typeof(b1-a1));
+
+        // 如果有字母或者符号与数字进行运算，结果会怎样？ 结果会出现NaN
+        console.log('abc123' - '12'); //NaN（not a number）
+
+        // 当+号出现在字符前面的时候，+号前面没有别的东西了，所以就判断它表示的是一个正数（+12），也就将‘12’转换成了数字类型。
+        console.log(+'12'+34); 
+    </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+1、互找学习伙伴，学习：js的发展过程、页面加载顺序、script标签应该放哪里
+2、document.write();document.writeln();
+
+3、用三种方式写图片新闻：
+    用很多个document.write()写
+    变量承载一个字符串，再用一次document.write()输出
+    dom.innerHTML = str;

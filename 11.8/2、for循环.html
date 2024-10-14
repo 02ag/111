@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for循环2</title>
+</head>
+<body>
+    <script>
+        // for的循环的变体：
+        // 我们可以把初始化语句放在for语句外面
+        var index = 0; //初始化语句虽然放在了外面，但是分号要留在小括号内
+        for(; index < 5; ){
+            console.log(index);
+            index++;
+        }
+
+        // i代替index是约定俗成的
+        // 也可以用j代替，当然还可以用m,n代替
+        // for(var i = 0;i<3;i++){
+        //     // 循环体；
+        // }
+
+        console.log('-----------------');
+
+        // while语句的初始化语句就在while语句的外面
+        // 语法：
+        var i = 0;
+        while(i<3){  //i<3 是判断语句
+            console.log(i); 
+            // 花括号中除了累加/累减语句以后都是循环体
+            i++;
+        }
+
+        // 理论上讲，所有的for循环和while语句都是可以互换。
+    </script>
+</body>
+</html>

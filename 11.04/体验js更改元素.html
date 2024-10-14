@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js事件</title>
+    <style>
+        #textBox{
+            width:500px;
+            height: 50px;
+            margin-bottom:30px;
+            padding:0 10px;
+            line-height: 50px;
+            border:1px solid black;
+        }
+        button{
+            margin:20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="textBox">这是原来的内容，请使用js去更成新的内容</div>
+    <!-- onclick后面的代码是：执行函数 -->
+    <button id="contentBtn" onclick="changeContent()">更改内容</button>
+    <button id="styleBtn" onclick="changeStyle()">更改边框和文字颜色</button>
+
+    <!-- <button id="contentBtn" onclick="document.getElementById('textBox').textContent='更改div里的内容！'">更改内容</button>
+    <button id="styleBtn" onclick="document.getElementById('textBox').style.color='red';document.getElementById('textBox').style.borderColor='red'">更改边框和文字颜色</button> -->
+
+    <script>
+        // 用document.getElementById()来获取元素
+        var textBox = document.getElementById('textBox');
+
+        // 定义函数
+        function changeContent() {
+            // innerHTML
+            textBox.textContent = '更改div里的内容！';
+        }
+
+        // 定义函数
+        function changeStyle(){
+            textBox.style.color = 'red';
+            textBox.style.borderColor = 'red';
+        }
+
+    </script>
+</body>
+</html>

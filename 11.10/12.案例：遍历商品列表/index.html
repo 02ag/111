@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遍历商品列表</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="box" id="box">
+        <!-- <a class="item" href="#">
+            <div class="logo">
+                <img src="./img/pro-logo.jpg" alt="商品图">
+            </div>
+            <p class="title">厂家直销_颚式破碎机_佰辰重工|质量保障</p>
+            <p class="company">河南佰辰机械设备有限公司</p>
+            <p class="tips">
+                <span>诚</span>
+                <span>钻石版</span>
+            </p>
+            <p class="price">60000</p>
+        </a>
+        <a class="item" href="#">
+            <div class="logo">
+                <img src="./img/pro-logo.jpg" alt="商品图">
+            </div>
+            <p class="title">厂家直销_颚式破碎机_佰辰重工|质量保障</p>
+            <p class="company">河南佰辰机械设备有限公司</p>
+            <p class="tips">
+                <span>诚</span>
+                <span>钻石版</span>
+            </p>
+            <p class="price">60000</p>
+        </a>
+        <a class="item" href="#">
+            <div class="logo">
+                <img src="./img/pro-logo.jpg" alt="商品图">
+            </div>
+            <p class="title">厂家直销_颚式破碎机_佰辰重工|质量保障</p>
+            <p class="company">河南佰辰机械设备有限公司</p>
+            <p class="tips">
+                <span>诚</span>
+                <span>钻石版</span>
+            </p>
+            <p class="price">60000</p>
+        </a>
+        <a class="item" href="#">
+            <div class="logo">
+                <img src="./img/pro-logo.jpg" alt="商品图">
+            </div>
+            <p class="title">厂家直销_颚式破碎机_佰辰重工|质量保障</p>
+            <p class="company">河南佰辰机械设备有限公司</p>
+            <p class="tips">
+                <span>诚</span>
+                <span>钻石版</span>
+            </p>
+            <p class="price">60000</p>
+        </a>
+        <a class="item" href="#">
+            <div class="logo">
+                <img src="./img/pro-logo.jpg" alt="商品图">
+            </div>
+            <p class="title">厂家直销_颚式破碎机_佰辰重工|质量保障</p>
+            <p class="company">河南佰辰机械设备有限公司</p>
+            <p class="tips">
+                <span>诚</span>
+                <span>钻石版</span>
+            </p>
+            <p class="price">60000</p>
+        </a>
+        <a class="item" href="#">
+            <div class="logo">
+                <img src="./img/pro-logo.jpg" alt="商品图">
+            </div>
+            <p class="title">厂家直销_颚式破碎机_佰辰重工|质量保障</p>
+            <p class="company">河南佰辰机械设备有限公司</p>
+            <p class="tips">
+                <span>诚</span>
+                <span>钻石版</span>
+            </p>
+            <p class="price">60000</p>
+        </a>
+        <a class="item" href="#">
+            <div class="logo">
+                <img src="./img/pro-logo.jpg" alt="商品图">
+            </div>
+            <p class="title">厂家直销_颚式破碎机_佰辰重工|质量保障</p>
+            <p class="company">河南佰辰机械设备有限公司</p>
+            <p class="tips">
+                <span>诚</span>
+                <span>钻石版</span>
+            </p>
+            <p class="price">60000</p>
+        </a>
+        <a class="item" href="#">
+            <div class="logo">
+                <img src="./img/pro-logo.jpg" alt="商品图">
+            </div>
+            <p class="title">厂家直销_颚式破碎机_佰辰重工|质量保障</p>
+            <p class="company">河南佰辰机械设备有限公司</p>
+            <p class="tips">
+                <span>诚</span>
+                <span>钻石版</span>
+            </p>
+            <p class="price">60000</p>
+        </a> -->
+    </div>
+
+    <script>
+        // 定义待循环数据，类型是数组，数组中每一个元素是一个产品对象（id,img,title,company,tips,price）
+        var array = [
+            {
+                id: 1,
+                img: './img/pro-logo.jpg',
+                title: '厂家直销_颚式破碎机_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 60000
+            },
+            {
+                id: 2,
+                img: './img/pro-logo2.jpg',
+                title: '厂家供应_欧版反击破价格_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 110000
+            },
+            {
+                id: 3,
+                img: './img/pro-logo.jpg',
+                title: '厂家直销_颚式破碎机_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 60000
+            },
+            {
+                id: 4,
+                img: './img/pro-logo2.jpg',
+                title: '厂家供应_欧版反击破价格_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 110000
+            },
+            {
+                id: 5,
+                img: './img/pro-logo.jpg',
+                title: '厂家直销_颚式破碎机_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 60000
+            },
+            {
+                id: 6,
+                img: './img/pro-logo2.jpg',
+                title: '厂家供应_欧版反击破价格_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 110000
+            },
+            {
+                id: 7,
+                img: './img/pro-logo.jpg',
+                title: '厂家直销_颚式破碎机_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 60000
+            },
+            {
+                id: 8,
+                img: './img/pro-logo2.jpg',
+                title: '厂家供应_欧版反击破价格_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 110000
+            },
+            {
+                id: 9,
+                img: './img/pro-logo.jpg',
+                title: '厂家直销_颚式破碎机_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 60000
+            },
+            {
+                id: 10,
+                img: './img/pro-logo2.jpg',
+                title: '厂家供应_欧版反击破价格_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 110000
+            },
+            {
+                id: 11,
+                img: './img/pro-logo.jpg',
+                title: '厂家直销_颚式破碎机_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 60000
+            },
+            {
+                id: 12,
+                img: './img/pro-logo2.jpg',
+                title: '厂家供应_欧版反击破价格_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 110000
+            },
+            {
+                id: 13,
+                img: './img/pro-logo.jpg',
+                title: '厂家直销_颚式破碎机_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 60000
+            },
+            {
+                id: 14,
+                img: './img/pro-logo2.jpg',
+                title: '厂家供应_欧版反击破价格_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 110000
+            },
+            {
+                id: 15,
+                img: './img/pro-logo.jpg',
+                title: '厂家直销_颚式破碎机_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 60000
+            },
+            {
+                id: 16,
+                img: './img/pro-logo2.jpg',
+                title: '厂家供应_欧版反击破价格_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 110000
+            },
+            {
+                id: 17,
+                img: './img/pro-logo.jpg',
+                title: '厂家直销_颚式破碎机_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 60000
+            },
+            {
+                id: 18,
+                img: './img/pro-logo2.jpg',
+                title: '厂家供应_欧版反击破价格_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 110000
+            },
+            {
+                id: 19,
+                img: './img/pro-logo.jpg',
+                title: '厂家直销_颚式破碎机_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 60000
+            },
+            {
+                id: 20,
+                img: './img/pro-logo2.jpg',
+                title: '厂家供应_欧版反击破价格_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 110000
+            }
+        ];
+
+        var listDom = document.getElementById('box');
+        var listStr = '';
+        for (var i = 0; i < array.length; i++) {
+            listStr += `<a class="item" href="#">
+                    <div class="logo">
+                        <img src="${array[i].img}" alt="商品图">
+                    </div>
+                    <p class="title">${array[i].title}</p>
+                    <p class="company">${array[i].company}</p>
+                    <p class="tips">`;
+            for (var j = 0; j < array[i].tips.length; j++) {
+                listStr += `  <span>${array[i].tips[j]}</span> `
+            }
+            listStr += ` </p>
+                    <p class="price">${array[i].price}</p>
+                </a>`
+        }
+        listDom.innerHTML = listStr;
+    </script>
+</body>
+
+</html>

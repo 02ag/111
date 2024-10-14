@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本数据类型</title>
+</head>
+<body>
+    <!-- 
+        java，c，c++；声明的时候就已经确定好了里面存储什么样类型的数据；如果存储的数据类型不是声明的类型，就会报错。
+        js是弱类型的语言。在声明对象的时候不用确定里面存储什么样类型的值；变量的类型随时可以改变。所以js又叫松散类型语言。
+
+        声明一个变量，可以保存各种类型的数据。
+        var a = 'abc';
+        a = 1;
+        a = document.getElementById('demo');
+        1、字符串定义时需要用到【单或双引号】
+
+
+     -->
+    <script>
+        // 1、字符串:【任何字符只要放进了引号里，就是字符串】 string
+        var str1 = '20';
+        var str2 = '';
+        // 每一个js语句，默认要用英文分号结束，才是一个完整的语句。
+        console.log(str1);
+        console.log(str2);
+
+        // 2、数字类型 number 整数，小数，正负数都可以声明；【不需要引号】
+        var num1 = -20.9876655; 
+        console.log(num1);
+
+        // 3、布尔值 真/假  boolean
+        // true 或 false来表示【真 或 假】
+        var male = true; 
+        var formal = false; 
+        // 我们在以后的js程序里，【不仅仅】会用true 和 false来表示真和假（对和错），我们还会用它来表示，
+        // 比如我们用true来表示女生，false表示男生。
+        console.log(10<9);
+        console.log(male);
+
+        // 4、undefined 未定义 ；一个变量【只声明未赋值】的时候是undefined
+        var empty;
+        console.log(empty);
+
+        // 5、null 空对象
+        var empty1 = null;
+        console.log(empty1);
+
+        // 基本数据类型（简单数据类型）：
+        // number, string, boolean, null ,undefined
+
+        // 引用类型（复杂数据类型）
+        // 1、数组 是数据的有序集合。 array
+        // 元素（数组里的每个数据）由逗号隔开；整个数组由方括号（中括号）包裹。
+        var arr = [1,'a', true, null, undefined,[1,2],{x:1},function(){}];
+        /*元素索引值：0  1    2    3        4       5     6      7
+            数组中的每个值都叫【元素】，每个元素在数组中都有一个编号，也就是索引，索引值从0开始。
+            注意：数组里的元素也可以是一个数组，对象，也可以是一个函数。
+
+            求数组长度(元素个数)：arr1.length
+        */ 
+        var len = arr.length;
+
+        console.log(len);
+
+
+        // 2、对象：用来定义万物 objct
+        // 对象中包含各种属性和方法
+        // 属性名与属性值中间用分号隔开
+        // 属性与属性中间用逗号隔开
+        var person = {
+            // 属性名：属性值
+            id: '411503xxxxxxxxxxxx',
+            name: '葛飞强',
+            sex: '男',
+            favi: ['听音乐', '打篮球'],
+            // 方法
+            eat: function(){
+
+            },
+            job: function(){
+
+            }
+        };
+        
+        // 3、函数：一个工具 function
+        // 定义一个函数
+        function add(x,y){ //形参
+            return x + y;
+        }
+
+        // 调用一个函数
+        var sun = add(2, 7);
+        console.log(sun);
+        
+    </script>
+
+     <!-- 
+        基本数据类型：number,string,boolean,null,undefined;
+        引用数据类型：oject,array,function
+        写数据类型的时候用小写字母
+        Number, String,Boolean，首字母大写时，表示相对应的对象
+      -->
+</body>
+</html>

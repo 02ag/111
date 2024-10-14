@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百钱买百鸡</title>
+</head>
+<body>
+    <p>我国古代数学家张丘建在《算经》一书中曾提出过著名的“百钱买百鸡”问题，该问题叙述如下：鸡翁一，值钱五；鸡母一，值钱三；鸡雏三，值钱一；百钱买百鸡，则翁、母、雏各几何？</p>
+    <p>翻译过来，意思是公鸡一个五块钱，母鸡一个三块钱，小鸡三个一块钱，现在要用一百块钱买一百只鸡，问公鸡、母鸡、小鸡各多少只？</p>
+    <p>设公鸡x只，母鸡y只，小鸡z只</p>
+    <p>5x + 3y + z/3 = 100</p>
+    <p>x + y + z = 100</p>
+    <script>
+        // 第一层循环公鸡
+        // for(var x = 0; x < 100; x++){
+        //     // 第二层循环母鸡
+        //     for(var y = 0; y < 100; y++){
+        //         // 第三层循环小鸡
+        //         for(var z = 0; z < 100; z++){
+        //             if(5*x + 3*y + z/3 === 100 && x + y + z === 100) {
+        //                 console.log('公鸡：x=' + x + '母鸡：y=' + y + '小鸡：z=' + z);
+        //             }
+        //         }
+        //     }
+        // }
+        
+        // 减少循环次数，可以节省性能。
+        // 第一层循环公鸡
+        for(var x = 0; x < 20; x++){
+            // 第二层循环母鸡
+            for(var y = 0; y < 34; y++){
+                // 第三层循环小鸡
+                for(var z = 0; z < 100; z++){
+                    if(5*x + 3*y + z/3 === 100 && x + y + z === 100) {
+                        console.log('公鸡：x=' + x + '母鸡：y=' + y + '小鸡：z=' + z);
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

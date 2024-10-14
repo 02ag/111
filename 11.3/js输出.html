@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js输出</title>
+</head>
+<body>
+    <div id="demo">js可以改变html内容</div>
+    <script>
+        /* 
+        js的输出：
+            1、document.write(''); 引号可以单引、也可以是双引
+            2、弹出框输出 alert(''); 引号可以单引、也可以是双引
+                我们可以在alert的括号内放字符串，也可以放变量、对象
+            3、console.log()
+
+
+        */
+        var demoDiv = document.getElementById('demo');
+        // alert('<h1>hello js!</h1>');
+        // alert(document.getElementById('demo'));
+        console.log('在控制台上输出');
+        console.log(document.getElementById('demo'));
+        console.log(demoDiv);
+
+        /* 
+        js 变量，变量就是一个容器，用来存储数据
+        数据内容可改变
+
+
+        数据可能是一个对象，也可能是一个字符串、数字
+
+        变量的声明，需要有关键字：var
+         */
+        //每一个js语句后面都要加一个英文分号，这个分号就代表了当前语句的结束。
+
+        // var 声明一个变量；一个变量只声明，那么该变量是空的，它没有值。
+        var a; //undefined
+        console.log(a); 
+
+        // 给变量赋值，用“等号”赋值
+        a = 'abc';
+        console.log(a);
+
+        // 【重新】给变量赋值，可以改变数据内容，同时也可以改变数据类型
+        a = 1;
+        console.log(A); //ERROR: A is not defined
+
+        // 我们也可以在声明变量的同时直接赋值
+        var b = 1;
+        // var 1 = 1;     a-a(连字符)   a_a（下划线）
+        /* 
+        变量的命名规则： 
+            1、变量名区分大小写：允许包含数字、字母、下划线和美元符号$，但是第一个字符不能是数字
+            2、变量名中不能出现汉字、空格、连字符‘-’、点‘.’等特殊字符；
+            3、变量名不能是关键字、保留字；
+            4、避免使用没有意义的名字。
+            注意：在定义变量的时候，变量名要尽量有意义，让自己、同事或者其他人能够轻易看懂，比如name存储姓名的变量。
+            驼峰命名法（
+                大驼峰：每个单词首字母大写，比如：StrArr，FileType
+                小驼峰：第一个单词首字母小写，后面的每个单词首字母大写，比如：strArr， fileType
+            ）
+
+            str_arr file_type
+        */
+        // var 1a;
+
+    </script>
+</body>
+</html>

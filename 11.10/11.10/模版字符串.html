@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模版字符串</title>
+</head>
+<body>
+    <!--  
+        模版字符串
+        字符串相加，结果是字符拼接，这个时候，+号也叫连字符。
+        模版字符串，我们可以叫它增强版字符串，用反引号[`]标识，我们也可以把它当成普通的字符串来使用；
+        优点：可以用来定义多行字符串，也可以在字符串中嵌入变量
+        嵌入变量的方法：
+            嵌入变量需要使用${变量名}
+            如果大括号里面不是字符串，会隐式转换成字符串。比如是一个对象，会默认调用toString方法，输出字符串。
+
+        模版字符串的特点：
+        1、可以出多行字符串
+        2、可以嵌入变量
+        3、大括号里可以存放js表达式
+        4、大括号里还可以调用函数
+    -->
+    <script>
+        var x = 1, y = 2;
+        console.log(`${x} + ${y} = ${x+y}`);
+        function fn() {
+            return 'hello world!';
+        }
+        console.log(`foo ${fn()} bar`);
+
+        var person = {
+            name: '张三',
+            age: 21,
+            job: '邮递员',
+            like: ""
+        };
+        console.log(person.job);
+
+    </script>
+</body>
+</html>

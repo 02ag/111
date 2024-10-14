@@ -1,0 +1,16 @@
+目的：练习for循环
+
+打印各种数值：
+https://www.jianshu.com/p/78e0469ada83
+js for循环练习题：
+https://www.cnblogs.com/king-govern/p/8256762.html
+https://www.cnblogs.com/cyjfighting/p/8253424.html
+https://www.cnblogs.com/ZXH-null/p/12054012.html
+https://www.cnblogs.com/tianranhui/p/10094608.html
+
+查看以上技术文章，练习for循环，有重复的题目自动避开。
+
+完成一部分for循环练习后，可尝试着把for改写成while。
+
+
+

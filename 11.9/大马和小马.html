@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大马和小马</title>
+</head>
+<body>
+    <p>1、大马驮2石粮食，中马驮1石粮食，两头小马驮一石粮食，要用100匹马，驮100石粮食，该如何调配？</p>
+    <p>
+        a+b+c=100;
+    </p>
+    <p>
+        2a+b+c/2=100
+    </p>
+    <script>
+        // 设大马a，中马b，小马c
+        // for(var a = 0;a<=50; a++){
+        //     for(var b = 0; b<=100; b++){
+        //         for(var c = 0; c < 100; c++){
+        //             if(a+b+c===100 && 2*a+b+c/2===100){
+        //                 document.write('大马：'+a+'匹；中马：'+b+'匹；小马：'+c+'匹');
+        //                 document.write('<br>')
+        //             }
+        //         }
+        //     }
+        // }
+
+        for(var a = 0;a<=50; a++){
+            for(var b = 0; b<=100; b++){
+                var c = 100 - a - b;
+                // for(var c = 0; c < 100; c++){
+                    if(a+b+c===100 && 2*a+b+c/2===100){
+                        document.write('大马：'+a+'匹；中马：'+b+'匹；小马：'+c+'匹');
+                        document.write('<br>')
+                    }
+                // }
+            }
+        }
+        
+    </script>
+</body>
+</html>

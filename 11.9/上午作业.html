@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上午的打印作业</title>
+</head>
+<body>
+    <script>
+        var N =5;
+        for(var i = 1; i <= N; i++){
+            for(var m = 1; m <= N-i; m++){
+                document.write('□');
+            }
+            for(var n = 1; n <= i; n++){
+                document.write('●');
+            }
+            document.write('<br>');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类型判断运算符</title>
+</head>
+<body>
+    <!-- 
+        typeof 一般用来判断基本数据类型:number,string,boolean,null,undefined;
+        instanceof 一般用来判断引用数据类型：Array，Function，Object
+     -->
+     <script>
+        var x =5;
+        // 使用typeof判断基本数据类型
+        console.log(typeof x); //number
+        console.log(typeof 'hello word!'); //string
+        console.log(typeof false); //boolean
+        console.log(typeof true); //boolean
+        console.log(typeof undefined); //undefined
+        console.log(typeof null); //object; null就是空对象
+
+        // 使用typeof判断引用数据类型:数组、对象、函数
+        console.log(typeof [1,2,3]); //object
+        console.log(typeof function(){}); //function
+        console.log(typeof {name:'张三'}); //object
+
+        // instanceof
+        // instance 实例（个体）
+        console.log([1,2,3] instanceof Array); // true
+        console.log({name:'张三'} instanceof Object); //true
+        console.log(function(){} instanceof Function); //true
+     </script>
+</body>
+</html>

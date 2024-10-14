@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简易计算器</title>
+</head>
+<body>
+    <label for="number1">操作数1：</label>
+    <input type="text" id="number1" value="100" ><br>
+    <label for="number2">操作数2：</label>
+    <input type="text" id="number2" value="1" ><br>
+    <input type="button" id="btnAdd" value="+" onclick="add()">
+    <input type="button" id="btnSub" value="-" onclick="sub()">
+    <input type="button" id="btnMul" value="*" onclick="mul()">
+    <input type="button" id="btnDiv" value="/" onclick="div()">
+    <script>
+        /*
+            1、获取dom元素：两个输入框，四个按钮
+            2、写+，-，*，/函数
+
+        */ 
+        var num1 = document.getElementById('number1'),
+            num2 = document.getElementById('number2'),
+            btnAdd = document.getElementById('btnAdd'),
+            btnSub = document.getElementById('btnSub'),
+            btnMul = document.getElementById('btnMul'),
+            btnDiv = document.getElementById('btnDiv');
+        
+        // btnAdd.onclick = add();
+        var val1,val2;
+        
+            // 加法函数
+        function add(){
+            val1 = num1.value - 0;
+            val2 = num2.value - 0;
+            alert(val1 + val2);
+        }
+
+        // 减法函数
+        function sub(){
+            val1 = num1.value - 0;
+            val2 = num2.value - 0;
+            alert(val1 - val2);
+        }
+
+        // 乘法函数
+        function mul(){
+            // var val1 = num1.value - 0,
+            //     val2 = num2.value - 0;
+            val1 = num1.value - 0;
+            val2 = num2.value - 0;
+            alert(val1 * val2);
+        }
+
+        // 除法函数
+        function div(){
+            // var val1 = num1.value - 0,
+            //     val2 = num2.value - 0;
+            val1 = num1.value - 0;
+            val2 = num2.value - 0;
+            alert(val1 / val2);
+        }
+        // 一个函数的花括号包裹区域我们叫，作用域。
+        // 在一个作用域内声明的变量，只有能当前作用域内用。出了当前作用域，就是未定义。
+        console.log(val1);
+    </script>
+
+</body>
+</html>

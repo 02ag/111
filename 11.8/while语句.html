@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while语句</title>
+</head>
+<body>
+    <script>
+        for(var i = 3; i<3; i++){
+            console.log(i);
+        }
+
+
+        var i = 3; //初始化语句
+        while(i<3){ //判断语句
+            // 循环体
+            console.log(i);
+            i++; //累加/累减语句
+        }
+        // 只能判断语句成立，才能执行循环体
+
+        // do...while语句
+        // 语法：
+        var j = 3; //初始化语句
+        // do...while语句是执行完初始化语句之后，先执行循环体，再执行判断语句，判断语句成立，会继续执行循环体，然后累加（减），然后又是判断语句...
+        do {
+            // 循环体
+            console.log(j);
+            j++; //累加/累减语句
+        } while(j<3); //j<3是判断语句
+
+        // do...while...语句至少会执行一次，while语句有可能一次都不执行就结束了
+
+    </script>
+</body>
+</html>

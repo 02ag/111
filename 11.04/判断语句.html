@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>判断语句</title>
+</head>
+<body>
+    <!-- 
+        基本数据类型：number，string，boolean，null，undefined
+        引用数据类型：数组array，对象object，函数function
+     -->
+    <script>
+        // 判断语句： if
+        // 语法：判断是否为真，为真则执行。 
+        // if(条件){
+        //     语句；
+        // }
+        // 如果条件是真，则执行花括号内的语句；条件是假，则不执行花括号内的语句
+        // 布尔值：true（真），false（假）
+        
+        if(10 > 9){
+            console.log("条件是真");
+        }
+        if(9>10){
+            console.log("条件是假");
+        }
+
+        var sex = true; //true:女生 false:男生
+        if(sex){
+            console.log('你是女生！')
+        }
+
+        // if...else... 如果（真）否则（假）
+       
+        // if(条件){
+        //     语句;
+        // } else {
+        //     语句
+        // }
+    
+        if(9>10){
+            console.log('条件是真');
+        } else {
+            console.log('条件是假');
+        }
+
+        /*
+            true:女生，false：男生
+        */ 
+        var male = true;
+        if(male){
+            console.log('你是女生！');
+        } else {
+            console.log('你是男生！')
+        }
+
+        // prompt()窗口输入，与窗口输出alert()对应
+        var score = prompt('请输入你的成绩：');
+        if(score >= 60){
+            console.log('恭喜你，及格了！');
+        } else {
+            console.log('继续加油吧，骚年！');
+        }
+
+        // 语法3：多判断语句
+        
+        // if(条件1){
+        //     语句
+        // } else if(条件) {
+        //     语句
+        // } else if(条件) {
+        //     语句
+        // } else if(条件) {
+        //     语句
+        // }...{
+        //     语句
+        // } else {
+        //     语句
+        // }
+        
+
+        /* 
+         >=90  优秀
+         80 - 89  良好
+         70 - 79  中等
+         60 - 69  及格
+         <60  不及格
+        */ 
+        var score1 = prompt('请输入你的成绩');
+        if(score1 >= 90) {
+            alert('恭喜你，优秀！');
+        } else if(score1 >= 80){
+            /*否则 <90*/ // 90>score1>=80
+            alert('恭喜你，良好！');
+        } else if(score1 >= 70){
+            alert('恭喜你，中等！');
+        } else if(score1 >= 60){
+            alert('恭喜你，及格了！');
+        } else {
+            alert('对不起，你不及格！');
+        }
+
+        // 单句：省略｛｝的写法
+        // if(条件) 语句
+        // 大括号里只有一条语句的时候，可以省略大括号,写在一行；
+        if(true) console.log('true');
+
+        if(10<9) console.log('此语句是真');
+        else console.log('此语句是假'); 
+    </script>
+</body>
+</html>

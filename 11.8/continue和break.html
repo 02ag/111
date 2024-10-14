@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>continue和break</title>
+</head>
+<body>
+    <script>
+        // continue继续  break中断
+        for(var i = 0; i < 3; i++){
+            if(i === 1){
+                console.log('此时i=1');
+                // break,可以中断整个for循环过程；
+                // break;
+                continue;
+                // 执行到continue语句，后面的就不执行了，然后直接继续下一次循环。
+                // 注意：continue不能使用到switch语句中
+                console.log(i);
+            }
+            console.log(i);
+        }
+    </script>
+</body>
+</html>

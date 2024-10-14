@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第一个js页面</title>
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <script>
+
+    </script>
+</head>  
+<body>
+    <!-- 
+        页面加载顺序：
+        1、DNS解析，可以将域名（www.baidu.com）转化成ip地址（192.168.xxx.xxx）
+        2、通过ip地址，通过三次tcp握手，与服务器进行连接
+        3、服务器返回html文件
+        4、如果服务器开启压缩功能，浏览器需要先解压再解析；如果服务器未开启文件的压缩功能，则直接根据文件的编码格式进行解析
+        5、开始渲染。浏览器处理html构建dom树，加载过程中如果遇到了link链接外部css，就会直接下载css文件,同时html继续往下加载，css下载完直接进行加载，构建css树。这个时候，css树与html的dom是并行加载。css默认不会阻止dom解析；【但是】会阻止dom的渲染；也就是说css加载完成之前，无法在浏览器上看到正常的页面。
+        6、加载过程当中，如果碰到了图片（img标签），html继续往下加载，同时图片先行下载，等图片下载完之后再添加到相应的dom位置，如果css加载较晚还会发生重绘。
+        7、如果遇到script标签，首先要判断是同步还是异步，同步则直接下载并执行js，如果是异步，会先下载文件，然后等html解析完再执行。
+        所以<script>一般放在页面底部</body>前
+        8、dom树与css树合并成为一个渲染树
+        9、调用GPU绘制，合成图层，显示在屏幕上。
+    -->
+    <!-- 、
+        js三种嵌入方式：
+        1、事件嵌入方式
+        2、内嵌式
+        3、外链式
+    -->
+    <!-- <script>
+        内嵌式
+    </script> -->
+    <!-- 事件嵌入 -->
+    <!-- <div style="width:100px;" onclick="js代码"></div> -->
+    <!-- 外链式： -->
+    <!-- <script src=""></script> -->
+
+    <!--  
+        script标签，推荐放在两个位置：
+            1、head结束标签上方：
+                当我们的js文件中的内容是需要在页面上渲染的跟页面样式相关的时候；因为页面渲染出来之前，就要把js的内容加载并渲染，不会耽误页面的首次渲染。
+            2、body结束标签上方
+                js文件中的内容是与业务功能相关的，需要用户进行操作的一些代码，这样就不会在加载html和css的时候去分掉一部分流量去加载当前不需要的js代码。
+    -->
+    <div id="demo" class="classDemo"></div>
+    <div id="eg"></div>
+    <script>
+        // 通过id去获取某一个标签
+        // document指的是当前的html文档
+        // .是可以调动当前对象的方法
+        // getElementById，是通过id去获取元素的一个方法
+        // 一个id在一个页面中只能出现一次
+        // document.getElementById('demo').innerHTML='我的第一段js代码';
+        // 一个class在页面中可以出现多次，所以用class名获取元素，得到的是一个数组
+        // document.getElementsByClassName('classDemo')[0].innerHTML
+
+        // JS的输出代码   单行注释快捷键 ctrl+/
+
+        /* 多行注释： 快捷键：shift+alt+A */ 
+       
+        // 第一种输出：
+        document.write("<h1 class='name'>hello javascript</h1>");
+        document.write('<h2 class="name">how are you?</h2>');
+        /* 
+            table + tr + td
+        */ 
+        var demoDom = document.getElementById('demo');
+        var str = '<h1>页面第一个大标题</h1>'
+        demoDom.innerHTML = str;
+
+    </script>
+</body>
+</html>

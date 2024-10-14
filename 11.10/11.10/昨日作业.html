@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昨日作业</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/date.js"></script>
+</head>
+<body>
+    <ul id="list" class="list">
+        <!-- <li>
+            <img src="img/img2.webp" alt="">
+            <h4>小米10 青春版 5G</h4>
+            <p class="sub-title">50倍潜望式变焦 / 轻薄5G手机</p>
+            <p class="price">2099元起</p>
+        </li>
+        <li>
+            <img src="img/img3.webp" alt="">
+            <h4>小米10 青春版 5G</h4>
+            <p class="sub-title">50倍潜望式变焦 / 轻薄5G手机</p>
+            <p class="price">2099元起</p>
+        </li>
+        <li>
+            <img src="img/img4.webp" alt="">
+            <h4>小米10 青春版 5G</h4>
+            <p class="sub-title">50倍潜望式变焦 / 轻薄5G手机</p>
+            <p class="price">2099元起</p>
+        </li>
+        <li>
+            <img src="img/img5.webp" alt="">
+            <h4>小米10 青春版 5G</h4>
+            <p class="sub-title">50倍潜望式变焦 / 轻薄5G手机</p>
+            <p class="price">2099元起</p>
+        </li>
+        <li>
+            <img src="img/img6.webp" alt="">
+            <h4>小米10 青春版 5G</h4>
+            <p class="sub-title">50倍潜望式变焦 / 轻薄5G手机</p>
+            <p class="price">2099元起</p>
+        </li>
+        <li>
+            <img src="img/img7.webp" alt="">
+            <h4>小米10 青春版 5G</h4>
+            <p class="sub-title">50倍潜望式变焦 / 轻薄5G手机</p>
+            <p class="price">2099元起</p>
+        </li>
+        <li>
+            <img src="img/img8.webp" alt="">
+            <h4>小米10 青春版 5G</h4>
+            <p class="sub-title">50倍潜望式变焦 / 轻薄5G手机</p>
+            <p class="price">2099元起</p>
+        </li>
+        <li>
+            <img src="img/img1.webp" alt="">
+            <h4>小米10 青春版 5G</h4>
+            <p class="sub-title">50倍潜望式变焦 / 轻薄5G手机</p>
+            <p class="price">2099元起</p>
+        </li> -->
+    </ul>
+    <script>
+        var listDom = document.getElementById('list'),
+            listStr = '';
+            // 加号遇到字符串，大家都变字符串，undefined也变字符串。
+        for(var i = 0; i < 8; i++){
+            // listStr += '<li>' +
+            // '<img src="img/img'+ i +'.webp" alt="">'+
+            // '<h4>小米10 青春版 5G</h4>'+
+            // '<p class="sub-title">50倍潜望式变焦 / 轻薄5G手机</p>'+
+            // '<p class="price">2099元起</p>'+
+            // '</li>';
+            // console.log(dataList[i]);
+            listStr += `
+            <li>
+                <img src="${dataList[i].img}" alt="">
+                <h4>${dataList[i].tit}</h4>
+                <p class="sub-title">${dataList[i].discription}</p>
+                <p class="price">${dataList[i].price}</p>
+            </li>
+            `
+            // console.log(listStr);
+        }
+        // console.log(listStr);
+
+        listDom.innerHTML = listStr;
+    </script>
+</body>
+</html>

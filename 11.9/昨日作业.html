@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业</title>
+    <style>
+        table{
+            width:800px;
+            margin: 50px auto;
+            border: 1px solid red;
+            border-collapse: collapse;
+        }
+        td{
+            border:1px solid red;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // 表格
+        document.write('<table>');
+        for(var i = 1; i<=9; i++){
+            document.write('<tr>');
+            for(var j = 1; j <= i; j++){
+                document.write('<td>' + i + '*' + j + '=' + i*j + '</td>');
+            }
+            document.write('</tr>');
+        }
+
+        document.write('</table>');
+
+        // 1--100:求和，求偶、求奇
+        // sum变量存放1-100的和
+        var sum = 0,
+            sum1 = 0, //奇数和
+            sum2 = 0;  //偶数和
+        for(var i = 1; i <= 100; i++){
+            // 求和：
+            sum += i;
+            // sum = sum + i;
+
+            // i%2===0 意思是一个数除以2，余数为0
+            if(i % 2 === 0){
+                document.write(i + '是偶数！<br>');
+                sum2 += i;
+            } else {
+                document.write(i + '是奇数！<br>');
+                sum1 += i;
+            }
+        }
+        document.write('1--100的和是'+sum+'。<br>1--100之间的奇数和是：'+sum1+'。<br>1--100之间的偶数和是：'+sum2);
+    </script>
+</body>
+</html>
