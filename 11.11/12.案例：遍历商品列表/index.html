@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遍历商品列表</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- <div class="box">
+        <a class="item" href="#">
+            <div class="logo">
+                <img src="./img/pro-logo.jpg" alt="商品图">
+            </div>
+            <p class="title">厂家直销_颚式破碎机_佰辰重工|质量保障</p>
+            <p class="company">河南佰辰机械设备有限公司</p>
+            <p class="tips">
+                <span>诚</span>
+                <span>钻石版</span>
+            </p>
+            <p class="price">60000</p>
+        </a>
+        <a class="item" href="#">
+            <div class="logo">
+                <img src="./img/pro-logo.jpg" alt="商品图">
+            </div>
+            <p class="title">厂家直销_颚式破碎机_佰辰重工|质量保障</p>
+            <p class="company">河南佰辰机械设备有限公司</p>
+            <p class="tips">
+                <span>诚</span>
+                <span>钻石版</span>
+            </p>
+            <p class="price">60000</p>
+        </a>
+        <a class="item" href="#">
+            <div class="logo">
+                <img src="./img/pro-logo.jpg" alt="商品图">
+            </div>
+            <p class="title">厂家直销_颚式破碎机_佰辰重工|质量保障</p>
+            <p class="company">河南佰辰机械设备有限公司</p>
+            <p class="tips">
+                <span>诚</span>
+                <span>钻石版</span>
+            </p>
+            <p class="price">60000</p>
+        </a>
+        <a class="item" href="#">
+            <div class="logo">
+                <img src="./img/pro-logo.jpg" alt="商品图">
+            </div>
+            <p class="title">厂家直销_颚式破碎机_佰辰重工|质量保障</p>
+            <p class="company">河南佰辰机械设备有限公司</p>
+            <p class="tips">
+                <span>诚</span>
+                <span>钻石版</span>
+            </p>
+            <p class="price">60000</p>
+        </a>
+        <a class="item" href="#">
+            <div class="logo">
+                <img src="./img/pro-logo.jpg" alt="商品图">
+            </div>
+            <p class="title">厂家直销_颚式破碎机_佰辰重工|质量保障</p>
+            <p class="company">河南佰辰机械设备有限公司</p>
+            <p class="tips">
+                <span>诚</span>
+                <span>钻石版</span>
+            </p>
+            <p class="price">60000</p>
+        </a>
+        <a class="item" href="#">
+            <div class="logo">
+                <img src="./img/pro-logo.jpg" alt="商品图">
+            </div>
+            <p class="title">厂家直销_颚式破碎机_佰辰重工|质量保障</p>
+            <p class="company">河南佰辰机械设备有限公司</p>
+            <p class="tips">
+                <span>诚</span>
+                <span>钻石版</span>
+            </p>
+            <p class="price">60000</p>
+        </a>
+        <a class="item" href="#">
+            <div class="logo">
+                <img src="./img/pro-logo.jpg" alt="商品图">
+            </div>
+            <p class="title">厂家直销_颚式破碎机_佰辰重工|质量保障</p>
+            <p class="company">河南佰辰机械设备有限公司</p>
+            <p class="tips">
+                <span>诚</span>
+                <span>钻石版</span>
+            </p>
+            <p class="price">60000</p>
+        </a>
+        <a class="item" href="#">
+            <div class="logo">
+                <img src="./img/pro-logo.jpg" alt="商品图">
+            </div>
+            <p class="title">厂家直销_颚式破碎机_佰辰重工|质量保障</p>
+            <p class="company">河南佰辰机械设备有限公司</p>
+            <p class="tips">
+                <span>诚</span>
+                <span>钻石版</span>
+            </p>
+            <p class="price">60000</p>
+        </a>
+    </div> -->
+
+    <div class="box" id="shoppingList"></div>
+    <script>
+        // 定义待循环数据，类型是数组，数组中每一个元素是一个产品对象（id,img,title,company,tips,price）
+        var array = [
+            {
+                id: 1,
+                img: './img/pro-logo.jpg',
+                title: '厂家直销_颚式破碎机_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版', '好'],
+                price: 60000
+            },
+            {
+                id: 2,
+                img: './img/pro-logo2.jpg',
+                title: '厂家供应_欧版反击破价格_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版', '明星版','翘楚'],
+                price: 110000
+            },
+            {
+                id: 3,
+                img: './img/pro-logo.jpg',
+                title: '厂家直销_颚式破碎机_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 60000
+            },
+            {
+                id: 4,
+                img: './img/pro-logo2.jpg',
+                title: '厂家供应_欧版反击破价格_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 110000
+            },
+            {
+                id: 5,
+                img: './img/pro-logo.jpg',
+                title: '厂家直销_颚式破碎机_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 60000
+            },
+            {
+                id: 6,
+                img: './img/pro-logo2.jpg',
+                title: '厂家供应_欧版反击破价格_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 110000
+            },
+            {
+                id: 7,
+                img: './img/pro-logo.jpg',
+                title: '厂家直销_颚式破碎机_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 60000
+            },
+            {
+                id: 8,
+                img: './img/pro-logo2.jpg',
+                title: '厂家供应_欧版反击破价格_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 110000
+            },
+            {
+                id: 9,
+                img: './img/pro-logo.jpg',
+                title: '厂家直销_颚式破碎机_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版', '明星版','翘楚'],
+                price: 60000
+            },
+            {
+                id: 10,
+                img: './img/pro-logo2.jpg',
+                title: '厂家供应_欧版反击破价格_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 110000
+            },
+            {
+                id: 11,
+                img: './img/pro-logo.jpg',
+                title: '厂家直销_颚式破碎机_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 60000
+            },
+            {
+                id: 12,
+                img: './img/pro-logo2.jpg',
+                title: '厂家供应_欧版反击破价格_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版', 'a', 'abc'],
+                price: 110000
+            },
+            {
+                id: 13,
+                img: './img/pro-logo.jpg',
+                title: '厂家直销_颚式破碎机_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 60000
+            },
+            {
+                id: 14,
+                img: './img/pro-logo2.jpg',
+                title: '厂家供应_欧版反击破价格_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 110000
+            },
+            {
+                id: 15,
+                img: './img/pro-logo.jpg',
+                title: '厂家直销_颚式破碎机_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 60000
+            },
+            {
+                id: 16,
+                img: './img/pro-logo2.jpg',
+                title: '厂家供应_欧版反击破价格_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 110000
+            },
+            {
+                id: 17,
+                img: './img/pro-logo.jpg',
+                title: '厂家直销_颚式破碎机_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版', '明星版','翘楚'],
+                price: 60000
+            },
+            {
+                id: 18,
+                img: './img/pro-logo2.jpg',
+                title: '厂家供应_欧版反击破价格_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 110000
+            },
+            {
+                id: 19,
+                img: './img/pro-logo.jpg',
+                title: '厂家直销_颚式破碎机_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 60000
+            },
+            {
+                id: 20,
+                img: './img/pro-logo2.jpg',
+                title: '厂家供应_欧版反击破价格_佰辰重工|质量保障',
+                company: '河南佰辰机械设备有限公司',
+                tips: ['诚', '钻石版'],
+                price: 110000
+            }
+        ];
+
+        var shoppingListDom = document.getElementById('shoppingList'),
+        listStr = '';
+        // 1、判断语句中，i应该小于什么？
+        // 2、i应该小于还是小于等于：
+        // 如果要循环的是数组，而且要从数组的第一项开始循环，那么i要从0开始，到arr.length-1
+        // arr = [0,1,2] arr.length=3, 索引值0 1 2 
+        // 如果判断语句中，i是小于，就要小于arr.length;如果i是小于等于，就要小于等于arr.length-1
+        /*for(var i = 0; i < array.length; i++){
+            listStr += `
+            <a class="item" href="#">
+                <div class="logo">
+                    <img src="${array[i].img}" alt="商品图">
+                </div>
+                <p class="title">${array[i].title}</p>
+                <p class="company">${array[i].company}</p>
+                <p class="tips">
+            `;
+            // 用反引号引住的这一串，虽然能换行，有嵌入变量，但他始终就是一个字符串；不能添加js表达；
+            for(var j = 0; j < array[i].tips.length; j++){
+                listStr += `<span>${array[i].tips[j]}</span>`
+            }
+            
+            listStr += `</p>
+                <p class="price">${array[i].price}</p>
+            </a>`;
+        }*/
+
+        // 字符串遇到+号，大家都变字符串；
+        // 在字符串中，+号是连接符，就是要把字符串拼接到一起
+        for(var i = 0; i<array.length; i++){
+            listStr += `
+            <a class="item" href="#">
+                <div class="logo">
+                    <img src="${array[i].img}" alt="商品图">
+                </div>
+                <p class="title">${array[i].title}</p>
+                <p class="company">${array[i].company}</p>
+                <p class="tips">`;
+
+            
+            // 当我们在循环数据的时候，如果某一属性的值还是数组，那么这个数组一般都要循环出来；
+            var tips = array[i].tips;
+            for(var j = 0; j< tips.length; j++){
+                listStr += `
+                    <span>${tips[j]}</span>
+                `;
+            }
+            
+
+            listStr +=`
+                </p>
+                <p class="price">${array[i].price}</p>
+            </a>`
+        }
+
+
+        shoppingListDom.innerHTML = listStr;
+
+</script>
+</body>
+
+</html>
