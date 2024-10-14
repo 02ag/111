@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实体字符</title>
+    <style>
+        .div1{
+            font-size:100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">中华人民共和国 &nbsp;万岁</div>
+    <div>中华人民共和国万岁</div>
+    <div>&#20013;&#21326;&#20154;&#27665;&#20849;&#21644;&#22269;&#19975;&#23681;</div>
+    <p><b>&#65;&#97;</b></p>
+    <!-- 
+        为什么要用实体字符：
+        1、实体字符不受编码的限制
+        2、为了防止开发过程中的误操作引起不必要的不良体验
+     -->
+     <!-- 
+        矢量图片（无限放大不失真）
+      -->
+    
+    <p>英文空格：&nbsp;小于：&lt;大于&gt;<br>
+    
+    双引号：&quot; &bull;</p>
+    <p>版权符号：&copy; 商标：&trade; 注册商标：&reg;</p>
+    <p>中文空格：&#x3000;</p>
+    <p>&yen;</p>
+</body>
+</html>

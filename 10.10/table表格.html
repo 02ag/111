@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        table {
+            width: 500px;
+            border: 1px solid red;
+            /* border-collapse:collapse(合并)|separate（分离） */
+            border-collapse: collapse;
+            /* table-layout: auto(单元格的宽度根据内容的多少变化)|fixed（固定分配。平分，单元格的宽度设置无效）; */
+            /* table-layout: auto; */
+        }
+
+        table td,
+        table th {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        table表格中重点的标签：table，tr，td，th
+        tbody可以不写，浏览器会自动补齐
+    -->
+    <!-- 变红的属性及标签，是已经废弃了的 -->
+    <!-- <table border="1" width="500" cellspacing="0"> -->
+    <table>
+        <!-- table表格的标题
+            caption里可以添加与table表格不相关的其他标签
+        -->
+        <caption>
+            <h5>这里是表格的头部</h5>
+        </caption>
+        <!-- 头部 -->
+        <thead>
+            <tr>
+                <th>表头1表头1</th>
+                <th>表头2</th>
+                <th>表头3</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td colspan="2">表头2的内容内容内容内容内容内容</td>
+                <!-- <td></td> -->
+            </tr>
+        </thead>
+        <!-- 身体 -->
+        <tbody>
+            <tr>
+                <td>2</td>
+                <td rowspan="4"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <!-- <td></td> -->
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <!-- <td></td> -->
+                <td></td>
+            </tr>
+        </tbody>
+        <!-- 脚 -->
+        <tfoot>
+            <tr>
+                <td>5</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- 
+        做项目时，table表格需要注意的重点内容：
+        1、table标签里除id、class以外的所有属性基本都不用，是为了给开发者省去不必要的麻烦
+        2、绝对不能用table布局：防止回流与重绘；防止拉低页面性能
+     -->
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+/* 
+@author:lvlifang
+@date:2022/10/13
+*/
+/* head */
+.headB{
+    min-width:1200px;
+    height: 60px;
+}
+.leftBox li{
+    float:left;
+    margin-left:25px;
+}
+.leftBox li a, .rightBox li a{
+    display: inline-block;
+    line-height: 60px;
+    color:#222;
+}
+.rightBox li{
+    float:right;
+    margin-right:32px;
+}
+.rightBox li .login{
+    margin-top: 17px;
+    padding:0 12px;
+    height: 24px;
+    line-height: 24px;
+    color:#fff;
+    background-color: #4e6ef2;
+    border-radius: 6px;
+}
+.headB a:hover{color:#4e6ef2;}
+.rightBox li .login:hover{
+    color:#fff;
+    background-color: #315efb;
+}
+.moreLi:hover .moreLst{
+    display: block;
+}
+.moreLst{
+    position:absolute;
+    right:0;
+    /* top:58px; */
+    top:calc(100% - 2px);
+    z-index:999;
+    padding:10px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0, .4);
+    border-radius:15px;
+    display: none;
+}
+.moreLst .flBox{
+    width:210px;
+}
+.moreLst .flBox a{
+    padding-top:10px;
+    float:left;
+    width:62px;
+    border-radius: 8px;
+    margin-right:10px;
+}
+.moreLst .flBox a:hover{
+    background-color: #f1f3fd;
+}
+.moreLst .flBox a:nth-child(3n){
+    margin-right:0;
+}
+.moreLst a span{
+    display: block;
+    margin:0 auto;
+    width:45px;
+    height: 45px;
+}
+.moreLst a .icon01{
+    background: url(./../img/baiduyun.png) no-repeat;
+    background-size: 45px 45px;
+}
+.moreLst a .icon02{
+    background: url(./../img/baobaozhidao.png) no-repeat;
+    background-size: 45px 45px;
+}
+.moreLst a .icon03{
+    background: url(./../img/jingyan.png) no-repeat;
+    background-size: 45px 45px;
+}
+.moreLst a .icon04{
+    background: url(./../img/baike.png) no-repeat;
+    background-size: 45px 45px;
+}
+.moreLst a .icon05{
+    background: url(./../img/tupian.png) no-repeat;
+    background-size: 45px 45px;
+}
+.moreLst a .icon06{
+    background: url(./../img/user-logo.jpg) no-repeat;
+    background-size: 45px 45px;
+}
+.moreLst a p{
+    line-height: 28px;
+    color:#222;
+    text-align: center;
+}
+.moreLst .moreA{
+    height: 34px;
+    line-height: 34px;
+    text-align:center;
+    color:#9195a3;
+    border-radius: 8px;
+}
+.moreLst .moreA:hover{
+    background-color: #f1f3fd;
+    color: #315efb;
+}
+
+/* content */
+.content{
+    width:660px;
+    margin: 0 auto;
+}
+.logo{    
+    text-align: center;
+}
+.logo a{
+    display: inline-block;
+    margin: 0 auto;
+}
+.logo a img{
+    width: 270px;
+    height: 129px;
+}
+.inpt{
+    width:100%;
+    margin-top:20px;
+    height: 44px;
+}
+.inpt .iptTxt{
+    padding:0 50px 0 15px;
+    width:495px;
+    height: 40px;
+    line-height: 40px;
+    font-size:13px;
+    border:2px solid #c4c7ce;
+    border-radius:8px 0 0 8px;
+}
+.inpt .iptTxt:focus{
+    border-color: #4e6ef2;
+}
+.inpt .intBtn{
+    width:108px;
+    height: 44px;
+    line-height: 44px;
+    background-color: #4e6ef2;
+    border:none;
+    text-align: center;
+    color: #fff;
+    border-radius:0 8px 8px 0;
+    position: absolute;
+    right:0;
+    top:0;
+    cursor: pointer;
+}
+.inpt .intBtn:hover{
+    background-color: #315efb;
+}
+.inpt .photo{
+    display: inline-block;
+    width: 24px;
+    height: 17px;
+    background: url(./../img/i.png) no-repeat 0 -51px;
+    position:absolute;
+    right:128px;
+    top:13px;
+    cursor: pointer;
+}
+.inpt .photo:hover{
+    background-position:0 -75px;
+}
+

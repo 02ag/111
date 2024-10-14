@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css层级选择器</title>
+    <style>
+        div span{
+            color:red;
+        }
+        div>span{
+            font-size:40px;
+        }
+        span+p{
+            background-color: aquamarine;
+        }
+        /* 第一种写法
+            先给li全部设置样式ul li
+            然后再去掉第一行li的样式ul li:first-child
+        */
+        ul li+li{color:blueviolet;font-size:30px;}
+        p ~ span{
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        层级选择器：
+        1、A B,例如：div span
+            表示我们要选择的是A元素的所有后代B元素
+        2、A>B,例如：div>span
+            表示我们要选择的是A元素的所有子代B元素（只选择亲儿子）
+        3、A + B，例如：span+p
+            首先A和B是兄弟元素，且前后相邻，其次选择的是后者，也就是B元素
+        4、A ~ B，例如 p ~ span
+            表示我们要选择中的是A标签后面的所有兄弟关系的B标签
+    -->
+    <!-- A B -->
+    <div>
+        <span>p标签前面的span标签</span>
+        <p>中华人民共和国</p>
+        <span>111span元素中的：中华人民共和国</span>
+        <p>
+            中华人民共和国
+            <span>222第二个p标签里的span标签</span>
+        </p>
+        <span>333中华人民共和国</span><br>
+        <span>444中华人民共和国</span>
+    </div>
+    <ul>
+        <li>选择的是后者</li>
+        <li>选择的是后者</li>
+        <li>选择的是后者</li>
+        <li>选择的是后者</li>
+        <li>选择的是后者</li>
+    </ul>
+</body>
+</html>

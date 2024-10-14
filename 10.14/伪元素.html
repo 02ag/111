@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素</title>
+    <style> 
+        .div1{
+            margin: 0 auto;
+            width:500px;
+            border:1px solid red;
+        }
+        .div1::before{
+            content: '元素的前面添加的内容';
+            height: 30px;
+            border: 1px solid yellowgreen;
+            /* display: block; */
+            /* font-size:12px; */
+            color: green;
+        }
+        .div1::after{
+            content: 'div1元素的后面添加的内容';
+            display: block;
+            font-size: 20px;
+            color:blue;
+        }
+        input::placeholder{
+            color:red;
+        }
+        ::selection{
+            color:yellowgreen;
+        }
+        div::first-letter{
+            /* font-size: 40px; */
+            color:red;
+        }
+        div::first-line{
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        伪元素：之所以被称为伪元素，是因为他们不是真正的页面元素。html也没有对应的元素，但是他的用法和表现形式和真正的页面元素一模一样。
+        可以设置css样式，可以改变元素功能属性（可以改变display属性）
+        作为前端开发人员，必须要掌握的伪元素：
+        ::befor在元素之前添加内容
+        ::after在元素之后添加内容
+
+        ::placeholder 匹配占伴符的文本，只有元素设置了placeholder属性，该元素才会生效。
+        ::selection css伪元素用于文档中被用户选中部分的样式修改（比如鼠标或者其他设备页面中，文字被选择）
+
+        ::first-letter 给文本的第一个字母添加样式,可以匹配所以元素里的文本
+        ::first-line 给文本的第一行添加样式,可以匹配所以元素里的文本
+    -->
+    <div class="div1">伪元素：之所以被称为伪元素，是因为他们不是真正的页面元素。html也没有对应的元素，但是他的用法和表现形式和真正的页面元素一模一样。可以设置css样式，可以改变元素功能属性（可以改变display属性）</div>
+    <input type="text" placeholder="请输入您的姓名" >
+</body>
+</html>

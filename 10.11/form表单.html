@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form表单</title>
+    <style>
+        input:out-of-range{
+            color:red;
+        }
+        input:in-range{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" min="10" max="99">
+    <input type="text" disabled value="这个输入框是禁用的"><br>
+    <!-- 
+        单选框需要注意：几个选择的radio，必须要相同的name属性值
+        用户体验：
+        label标签里的for属性是用来扩展点击区域的
+     -->
+    
+    姓别：
+    <label for="boy">男：</label>
+    <input type="radio" id="boy" value="0" name="sex">
+    <label for="girl">女：</label>
+    <input type="radio" id="girl" name="sex" value="1"><br>
+
+
+
+    <!-- 
+        1、块标签里可以写行内标签
+        但是行内标签里不可以写块标签；但是a标签里可以写块元素
+        div标签里可以写任何标签
+        2、a标签里不可以写a标签,a标签和a标签是不可以嵌套的
+            p标签里也不写p标签，
+
+        注意标签的语义化！！！！！！
+     -->
+    
+    <!-- 
+        这些都是错误的写法：
+        <a href="#">这是一个a标签<a>这是A标签里面的一个a标签</a></a>
+    <p>块标签里可以写行内标签块标签里可以写行内标签块标签里可以，写行内标签块标签里可以写行内标签块标签里可以写行内标签块标签里可以写行内标签块标签里可以写行，内标签块标签里可以写行内标签块标，签里可以写行内标签块标签里可以写行内标签块标签里可以写行内标签块标签里可以写行内标签，块标签里可以写行内标签块标签，里可以写行内标签块标签里可以写行内标签块标签里可以写行内标签块标签里可以写行内标签。
+        <p>
+            label标签里的for属性是用来扩展点击区域的
+        </p>
+        nput type="radio" id="girl" name="sex" value=
+    </p> -->
+</body>
+</html>

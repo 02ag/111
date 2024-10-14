@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标签</title>
+    <style>
+        .left{
+            width:300px;
+            height: 300px;
+            padding:20px;
+            margin:20px;
+            border: 1px solid #999;
+        }
+        .right{
+            float: right;
+            width: 500px;
+            height: 200px;
+            background-color: red;
+        }
+        .span{
+            margin-left:20px;
+            margin-right:20px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        标签
+    </p>
+    <p>
+        按照闭合特征分类：闭合标签（双标签）和单标签；
+    </p>
+    <p>
+        按照<span class="span">标签的类型</span>分类：行内元素、行内块元素、块级元素
+    </p>
+    <!-- 
+        块元素的特征：
+            1、某一个元素，如果不设置宽度，默认是父级标签的宽度，高度是由内容撑开的。可设置高宽
+                一行只能展示一个标签
+            2、常用块元素：div,ul,ol,li,dl,p,h1-h6,from,table,section,nav,header,main,aside,footer
+        行内元素的物征：
+            1、宽高不可以设置，宽高是由内容自动撑开；margin值上下无效，左右是有效；padding四个方向都有效，会撑大空间；其他盒模型的样式都无效。
+            2、多个标签可以显示在一行。
+            3、常用的行内元素：a,b,strong,span,small,i,em,label,sub,sup,em,code
+        行内块元素的特征：
+            1、结合了行内元素和块元素的优点，不仅可以设置高宽，还可以多个标签在一行内显示。
+            2、常用的行内块：img，input
+     -->
+
+    <div class="right"></div>
+    <div class="left"></div>
+    <ol>
+        <li>肉</li>
+        <li>香蕉</li>
+        <li>苹果</li>
+        <li>菜篮子</li>
+    </ol>
+    <ol start="51">
+        <li>肉</li>
+        <li>香蕉</li>
+        <li>苹果</li>
+        <li>菜篮子</li>
+    </ol>
+    <!-- 
+        行内中有一类叫短语元素（格式化元素）：span,em,strong,i,del,sub,sup,code,kbd,var
+        不建议用标签来实现某些视觉效果，如果有一些效果需要实现，我们更加推荐使用css来实现。
+     -->
+     <!-- 
+        盒模型：
+        html文档中每个元素都有四个部分组成：content（内容区），padding(内边距),border（边框）,margin（外边距）
+        这四部分合起来，我们叫盒模型。
+        盒模型分为：标准模型和怪异模式
+        标准模型：元素的宽度就是内容区的宽高
+        怪异模式(IE盒子)：元素的宽度=content+padding+border
+      -->
+</body>
+</html>

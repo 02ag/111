@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动</title>
+    <style>
+        .wrap{
+            /* height: 102px; */
+            /* overflow:hidden; */
+        }
+        .wrap::after{
+            /* 伪元素必须要有的一个css属性，用来添加文本的，这里不需文本，所以是空文本 */
+            content:'';
+            /* 设置块级元素 */
+            display:block;
+            /* 是为了让添加的元素看不到 */
+            height:0;
+            /* 设置元素是否显示，hidden：隐藏，visible显示 */
+            /* 隐藏也是为了不让看到添加的元素 */
+            visibility:hidden;
+            /* 清除左右浮动 */
+            clear:both;
+        }
+        .left{
+            float:left;
+            width:500px;
+            height: 100px;
+            border:1px solid red;
+        }
+        .clear{
+            clear: both;
+        }
+        .content{
+            width:400px;
+            height: 400px;
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        浮动：
+        元素浮动后，会脱离文档流。浮动元素之后的兄弟元素就会挤占浮动元素的空间，就会造成页面错乱。
+        所以~~~~~~~~~~~只要写了浮动，就一定要清浮动。
+    -->
+    <div class="wrap">
+        <div class="left"></div>
+        
+    </div>
+    <div class="content"></div>
+
+
+    <!-- 
+        清浮动的方法：
+        1、给浮动元素的父元素添加高度
+        缺点：会影响布局；
+
+        2、给浮动元素的父元素添加overflow:hidden;
+        缺点：有可能会影响其他样式
+
+        3、给浮动元素后面添加空标签，设置clear:both;
+        缺点：会给页面增加很多的空标签。
+
+        4、给浮动元素的父元素添加伪元素::after
+
+     -->
+</body>
+</html>

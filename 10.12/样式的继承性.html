@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>样式的继承性</title>
+    <style>
+        /* 类选择器，权重是10 */
+        .box{
+            height: 100px;
+            line-height: 100px;
+            border:1px solid green;
+            font-size:20px;
+            font-weight: bold;
+            font-family: "汉隶";
+            color:red;
+            text-shadow:0 5px blue;
+            text-decoration: underline;
+            text-indent:2em;
+        }
+        /* 标签选择器，权重是1 */
+        span{ 
+            font-size:12px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        继承样式的权重是最小的
+        * 0
+        标签选择器 1
+        类选择器（伪类选择器） 10
+        ID选择器 100
+        行内样式style=“” 1000
+        !important 元穷大
+     -->
+    <div class="box">div标签的内容 &nbsp;&nbsp;<span>div标签内部的span标签</span></div>
+
+    <!-- 
+        css的继承：就是给父级元素设置一些属性，子级元素继承了父级的该属性，比如color，font-size，这就是我们的css中的继承。
+        w3c的规则规定，某些样式不仅可以应用于选中的特定html标签，也应用于他们的后代元素，这类的样式就是继承样式。
+
+        1、有继承性的css属性：
+        和颜色相关：color
+        和字体相关：font-size,font-weight,font-family,font-style
+        和文本相关：text-align,line-height,text-shadow,text-decoration,text-indent,
+        和表格相关：border-collapse
+        和列表相关：list-style
+        2、没有继承性的
+        width，height，border，padding,margin;
+        display,浮动，定位
+     -->
+
+     <!-- 
+        一行文字溢出，用省略号代替：
+        1、定宽 width:200px;
+        2、强制不换行：white-space:nowrap;
+        3、溢出隐藏：overflow:hidden;
+        4、超出的内容用省略号替换：text-overflow:ellipsis;
+
+        多行文字溢出，用省略号代替：
+        1、定宽 width:200px;
+        2、溢出隐藏 overflow:hidden;
+        3、盒子属性改成伸缩盒子，盒子里的元素排列方向改成纵向，控制行数 display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3;
+        4、text-overflow:ellipsis;
+
+      -->
+</body>
+</html>

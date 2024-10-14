@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <style>
+        /* base style */
+        html,body{
+            width:100%;
+            height: 100%;
+            font-size: 14px;
+        }
+        html,body,div,p,ul,ol,li,h1,h2,h3,h4,h5,h6,br,hr{
+            margin:0;padding:0;
+        }
+        input,button{outline:0;}
+        .wrap{
+            margin:20px auto;
+            width:400px;
+            padding:65px 50px;
+            border-radius:6px;
+        }
+        .blueB{
+            border:1px solid blue;
+        }
+        .wrap .tit{
+            padding:20px 0 25px;
+            font-weight: bold;
+            font-size:35px;
+            line-height: 100%;
+            color:blue;
+            border-bottom:1px dashed blue;
+        }
+        .wrap .row{
+            height: 40px;
+            margin:25px 0;
+        }
+        .wrap .row .inpt{
+            width:190px;
+            height: 20px;
+            line-height:20px;
+            padding:5px;
+            border-radius:3px;
+        }
+        .wrap .row .tip{
+            display: inline-block;
+            height: 40px;
+            line-height: 40px;
+            padding:0 10px;
+            background-color: blue;
+            border-radius: 3px;
+            color:#fff;
+            font-size:12px;
+            position: relative;
+            left:20px;
+            visibility: hidden;
+        }
+        .wrap .tip::after{
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border:5px solid transparent;
+            border-right-color:blue;
+            position: absolute;
+            left:-10px;
+            top:50%;
+            transform: translateY(-50%);
+        }
+        .wrap .row .inpt:focus + .tip{
+            visibility: visible;
+        }
+        .wrap .row .regist{
+            margin-left:100px;
+            height: 40px;
+            line-height: 40px;
+            padding:0 30px;
+            color:#fff;
+            background-color: blue;
+            border-radius: 3px;
+            font-size:16px;
+            border:none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap blueB">
+        <h1 class="tit">注册</h1>
+        <form action="#">
+            <div class="row">
+                <label for="account">注册：</label>
+                <input type="text" id="account" class="inpt blueB" placeholder="请输入您的帐号">
+                <span class="tip">8-16个字符</span>
+            </div>
+            <div class="row">
+                <label for="psw">密码：</label>
+                <input type="text" id="psw" class="inpt blueB" placeholder="请输入您在密码">
+                <span class="tip">8-16个字符</span>
+            </div>
+            <div class="row">
+                <button class="regist">注册</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

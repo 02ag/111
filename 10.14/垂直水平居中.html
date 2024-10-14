@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>垂直水平居中</title>
+    <style>
+        .parent{
+            margin:20px auto;
+            position:relative;
+            width:800px;
+            height: 800px;
+            border: 1px solid red;
+        }
+        .parent .son{
+            position: absolute;
+            width:100px;
+            height: 100px;
+            background-color: #aaa;
+        }
+        /* 第一种方法： */
+        /* .son{
+            left:50%;
+            top:50%;
+            margin-left:-50px;
+            margin-top:-50px;
+        } */
+        /* 第二种方法： */
+        /* 
+            css的计算属性：calc(),一定要记住，运算符号的两边需要有英文空格；
+        */
+        /* .son{
+            left:calc(50% - 50px);
+            top:calc(50% - 50px);
+        } */
+        /* 第三种方法： */
+        /* .son{
+            left:50%;
+            top:50%;
+            transform:translate(-50%, -50%);
+        } */
+        /* 第四种方法： */
+        /* .son {
+            left:0;
+            right:0;
+            bottom:0;
+            top:0;
+            margin:auto;
+        } */
+        /* 第五种方法：flex布局 */
+        .parent{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        垂直水平居中：
+        方法一：定位的方法，需要相对于父元素进行定位。
+        首先给父元素设置相对定位
+        子元素position:absolute;top:50%;left:50%;margin-left:-width/2;margin-top:-height/2;
+
+        方法二：思路同方法一
+        父元素相对定位
+        子元素绝对定位，left:calc(50% - width/2);top:calc(50% - height/2);
+
+        方法三：思路同方法一
+        父元素相对定位
+        子元素绝对定位，left:50%;top:50%;transfrom:translate(-50%,-50%);translate里的50%，是相对于元素自身的宽高来说的。
+
+        方法四：定位+margin:auto;
+        父元素相对定位
+        子元素绝对定位，四个方向值都是0,就是要告诉子元素父元素的边界在哪里，这个时候再加上margin:auto，就可以平分垂直水平方向剩余的长度了。
+
+        方法五：flex布局
+        父元素：设置display:flex;justify-content:center;align-items:center;
+        子元素只做自己需要的设置。
+     -->
+    <div class="parent">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

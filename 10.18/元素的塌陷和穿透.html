@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素的塌陷和穿透</title>
+    <style>
+        .box1,.box2{
+            width: 200px;
+            height: 200px;
+            margin:30px auto;
+            background-color: rgba(0,0,0,.3);
+            /* border: 1px solid red; */
+        }
+        .box1{
+            /* margin-bottom: 20px; */
+        }
+        .box2{
+            /* margin-top: 10px; */
+            /* border: 1px solid red; */
+            /* padding:10px */
+            overflow:hidden;
+        }
+        .son{
+            width:100px;
+            height: 100px;
+            margin-top:20px;
+            background-color: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <p>
+        <pre>
+        一、塌陷问题
+        定义：高度塌陷，所设置的元素脱离了文档流，无法撑开父元素高度，导致父元素高度消息，页面混乱。这就叫高度塌陷。
+        塌陷问题，解决办法就是清浮动。
+        方法：
+        1、给父元素添加高度
+        2、给父元素添加overflow:hidden;
+        3、添加空白div清浮动
+        4、给父元素添加伪元素
+        二、合并（穿透）的问题（又叫外边距合并、外边距穿透）
+            使用margin定义块元素的垂直方向的外边距时，可能会出现外边距合并的问题：
+            1、兄弟元素之间:
+                当上下两个相邻的块元素相遇时，如果上面的元素有下外边距，下面的元素有上外边距，则他们之间的垂直间距就是两者中较大者
+                理解这个问题需要理解外边距的定义：块元素的边框到【其他元素的边框】的距离
+            2、父子元素之间：
+                当父元素【没有上内边距以及边框】，那么父元素的上外边距与子元素的上外边距会出问题
+                原因：父元素没有上内边距或边框
+
+                解决办法:
+                1、给父元素加边框（如果不需要，可以加透明边框）
+                2、给父元素加内边距
+                3、给父元素添加overflow:hidden;
+        总结：
+            margin重叠，又叫外边距的合并，也可以叫外边距穿透。是指两个垂直的外边距相遇时，它们将形成一个外边距。
+            合并之后的外边距的高度等于两个发生合并的外边距的高度中的较大者。
+            这种情况一般发生在：兄弟之间、父子之间
+            不管是哪种情况下的margin重叠，重叠后取两个margin值中最大者。
+            消除重叠的解决方案：
+            1、添加边框（不需要时，可添加透明边框）
+            2、添加padding
+            3、overflow：hidden
+        </pre>
+    </p>
+    <div class="box1">
+
+    </div>
+    <div class="box2">
+        <div class="son">
+
+        </div>
+    </div>
+</body>
+</html>

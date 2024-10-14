@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景</title>
+    <style>
+        .bg{
+            width: 500px;
+            height: 300px;
+            /* 颜色+图片 */
+            /* background: red url(./img/img_flwr.gif) no-repeat; */
+            /* 多颜色 */
+            /* background:linear-gradient(45deg, red, orange,yellow,green,greenyellow,blue,blueviolet); */
+            /* background: linear-gradient(135deg, transparent 50%, red 50%); */
+            /* 多图片 */
+            background-image: url(./img/img_flwr.gif), url(./img/bg.gif);
+            background-repeat: no-repeat, repeat;
+            background-position: right bottom, left top;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        背景知识点总结：
+            background-color,
+            background-image,
+            background-repeat,
+            background-position,
+            background-size,
+            background-origin：border-box|padding-box|content-box,指定背景图片的定位区域（自己尝试一下）
+            background-clip:border-box|padding-box|content-box｜text,指定背景图片的绘画区域。
+
+            注意：background-clip:text;只有在webkit内核下有效，所以css属性前面必须要添加前缀；同时也必须要给color:transparent.
+    -->
+    <!-- 
+        关于兼容的css前缀：
+        -webkit-兼容webkit内核的浏览器，比如chrome
+        -o- 兼容是opera欧朋浏览器
+        -moz-兼容火狐浏览器
+        -ms- 兼容ie浏览器
+    -->
+
+    <!-- 多背景：
+        背景可以设置多个颜色，可以设置颜色+图片，多个图片
+
+        linear-gradient()函数,用于创建一个渐变的“图像”。
+    -->
+    <div class="bg"></div>
+</body>
+</html>

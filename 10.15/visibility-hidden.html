@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>visibility:hidden;</title>
+    <style>
+        div{
+            width: 300px;
+            height: 400px;
+            border: 1px solid red;
+            visibility: hidden;
+        }
+        p:hover + div{
+            visibility: visible;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 
+        visibility:hidden（表示元素不可见）|visible(表示元素可见)｜collapse（）｜inherit(从父元素继承的visibility属性值)
+        特点：隐藏之后，位置依然保留，不消失。其他的元素也不能占用。
+
+        总结一下能够让元素看不见的css属性有哪些？
+        visibility:hidden;
+        display:none;
+        opacity:0;
+        定位（层级）
+
+    -->
+    <p>我是p标签</p>
+    <div></div>
+</body>
+</html>

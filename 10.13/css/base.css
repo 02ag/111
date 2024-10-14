@@ -1,0 +1,48 @@
+/* 
+@author:lvlifang
+@date:2022/10/13
+*/
+/* reset style */
+html,body{
+    width:100%;
+}
+body{
+    font-size:13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html,body,ul,ol,li,dl,dd,dt,h1,h2,h3,h4,h5,h6,p,form,input,textarea,button,table,th,td,hr{
+    margin:0;
+    padding:0;
+}
+h1,h2,h3,h4,h5,h6,small,big,input,textarea,select{
+    font-size:100%;
+}
+header,nav,aside,main,footer,details,section,hgroup,menu,article{
+    display:block;
+}
+a{
+    outline: none;
+    text-decoration: none;
+}
+input:focus,select:focus,textarea:focus{
+    outline:none;
+}
+ul,ol,li{
+    list-style: none;
+}
+em,i,strong,b{
+    font-style: normal;
+}
+img{border:0;}
+
+/* base style */
+.relative{
+    position:relative;
+}
+.clearfix::after{
+    content:'';
+    display: block;
+    height:0;
+    visibility: hidden;
+    clear:both;
+}

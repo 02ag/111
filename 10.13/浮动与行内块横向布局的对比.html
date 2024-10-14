@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动与行内块横向布局的对比</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+        .in_block{
+            font-size:0;
+        }
+        .in_block, .div_float{
+            border: 1px solid red;
+            margin: 30px;
+        }
+        .in_block > div, .div_float > div{
+            width:100px;
+            height: 100px;
+        }
+        .in_block > div{            
+            display: inline-block;
+        }
+        .in_block .div1, .div_float .div3{
+            background-color: greenyellow;
+        }
+        .in_block .div2, .div_float .div4{
+            background-color: aquamarine;
+        }
+        .div_float > div{
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <!-- inline-block 布局 -->
+    <!-- 
+        缺点：元素与元素之间会出一条4px的缝隙
+        行内元素、以及行内块元素，在写代码的时候，最好不要有空格或者换行的情况出现，否则会出现一条4px的缝隙。
+     -->
+    <div class="in_block">
+        <div class="div1"></div>
+        <div class="div2"></div>
+    </div>
+
+    <!-- 浮动布局 -->
+    <!-- 
+        缺点：必须要清浮动
+    -->
+    <div class="div_float clearfix">
+        <div class="div3"></div>
+        <div class="div4"></div>
+    </div>
+</body>
+</html>

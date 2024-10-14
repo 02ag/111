@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定义列表</title>
+    <style>
+        *{
+            margin:0;padding:0;
+        }
+        dt,dd{
+            border:1px solid red;
+        }
+        .way1 dt{
+            float:left;
+            width:70px;
+            color:white;
+            background-color: blue;
+        }
+        dt,dd{
+            padding:0 10px;
+            line-height: 40px;
+        }
+        dd{
+            padding-left: 100px
+        }
+        dl + dl dt, dl + dl dd{
+            border-top:none;
+        }
+        .way2{
+            margin-top: 20px;
+        }
+        .way2 dl{
+            position: relative;
+        }
+        .way2 dt{
+            position:absolute;
+            left:0;
+            top:0;
+            bottom:0;
+            width:70px;
+            color:#fff;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<div class="way1">
+    <dl>
+        <dt>满腹经纶</dt>
+        <dd>比喻人很有学问、本领。《周易》：“象曰：云雷屯，君子以经纶。”经纶：整理丝缕，引申为人的才学、本领。引申为人的才学、本领。引申为人的才学、本领。引申为人的才学、本领。引申为人的才学、本领。引申为人的才学、本领。引申为人的才学、本领。引申为人的才学、本领。引申为人的才学、本领。引申为人的才学、本领。</dd>
+    </dl>
+    <dl>
+        <dt>壮志凌云</dt>
+        <dd>形容理想宏伟远大。凌云：直上云霄。</dd>
+    </dl>
+</div>
+<div class="way2">
+<dl>
+    <dt>满腹经纶</dt>
+        <dd>比喻人很有学问、本领。《周易》：“象曰：云雷屯，君子以经纶。”经纶：整理丝缕，引申为人的才学、本领。引申为人的才学、本领。引申为人的才学、本领。引申为人的才学、本领。引申为人的才学、本领。引申为人的才学、本领。引申为人的才学、本领。引申为人的才学、本领。引申为人的才学、本领。引申为人的才学、本领。</dd>
+    </dl>
+    <dl>
+        <dt>壮志凌云</dt>
+        <dd>形容理想宏伟远大。凌云：直上云霄。</dd>
+    </dl>
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>层级选择器</title>
+    <style>
+        div+p{
+            font-size:40px;
+        }
+        div~p{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        层级选择器：由“> ,空格,~ , +”连接的复合选择器
+
+        1、A B，比如div span{},表示我们要选择的是div标签里面所有的span（也就是说，子元素是span可以选中，孙元素是span的也可以选中）
+        2、A>B，比如div>span{},表示我们要选择的是div标签的子元素span（不包括孙元素，以及曾孙元素等等）。
+        3、A+B，比如div+p,表示我们要选择的是与div是兄弟元素的p标签，且p标签紧跟在div标签后面。
+        4、A~B，比如div~p，表示我们要选择的是与div是兄弟元素的p标签，且div后面的所有p标签都选中。也就是说只有是在div后面的并且与div是相同父元素的p标签，都选中。
+     -->
+    <!-- div + p -->
+    <div>第一个div标签</div>
+    <p>第一个p标签</p>
+    <div>第二个div标签</div>
+    <p>第二个p标签</p>
+    <p>第三个p标签</p>
+</body>
+</html>

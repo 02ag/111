@@ -1,0 +1,73 @@
+/* 
+通配符为了把样式格式化。
+但是在大的项目中，不能通配符来对样式进行格式化
+*/
+*{
+    margin:0;
+    padding:0;
+}
+.relative{
+    position:relative;
+}
+.w90{
+    width:90px;
+}
+/* 
+在写项目的时候，一个功能模块必须要有一个唯一class
+代码复用率要高
+*/
+.form_table{
+    width:800px;
+    /* 左右居中 */
+    margin:20px auto 0;
+    /* 
+    margin 外边距
+    margin: 20px; 上下左右四个方向的外边距都是20px
+    margin: 10px(上下外边距是10px) 20px（左右方向外边距是20px）; 
+    margin: 20px 40px 0;
+    20px：第一个值表示上面的外边距是20px；
+    40px：第二个值表示左右方向的外边距是40px；
+    0：第三个值表示下面的外边距是0；
+    margin:10px 20px 30px 4px; 上 右 下 左
+
+    margin-left、margin-right、 margin-bottom、 margin-top。
+    */
+    border-collapse: collapse;
+}
+.form_table tr td, .form_table tr th{
+    /* 
+    我们在写样式表的时候，最好能把布局相关的样式写在前面；
+    盒模型（宽高、内边距、边框、外边距）、浮动、定位。
+    背景、动画、特别效、文字效果，这些一般放在后面。
+    */
+    height: 16px;
+    padding:5px;
+    text-align: center;
+} 
+.form_table tr .t_left{
+    text-align: left;
+}
+.form_table .table_num{
+    /* 
+    在写定位的时候，一定至少写两个方向，这样能保证我们的定位比较稳定
+    */
+    position:absolute;
+    right:64px;
+    top:6px;
+}
+.form_table tbody td{
+    border:1px solid #000;
+}
+.form_table tbody .noBorder{
+    border:none;
+    width:20px;
+    /* 
+    在浏览器的页面上，能够显示出来的最小字号是12px
+    */
+    font-size:12px;
+}
+/*  */
+.form_table .noBorder span+span{
+    display: inline-block;
+    padding-top:30px;
+}

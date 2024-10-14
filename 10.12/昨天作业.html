@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昨日作业</title>
+    <style>
+        *{
+            margin:0;padding:0;
+        }
+        .wCenter{
+            margin:20px auto;
+        }
+        .relative{
+            position:relative;
+        }
+        .f12{
+            font-size:12px;
+        }
+        .flex{
+            display:flex;
+        }
+        /* 倒圆角 */
+        .box1{
+            width:200px;
+            height: 200px;
+            border:2px solid red;
+            background-color: blue;
+        }
+        .box1 > div{
+            width:30px;
+            height: 30px;
+            border:2px solid red;
+            background-color: #fff;
+            position:absolute;
+        }
+        .box1 .child1{
+            left:-2px;
+            top:-2px;
+            
+            border-left:none;
+            border-top:none;
+            border-radius: 0 0 30px 0;
+        }
+        .box1 .child2{
+            right:-2px;
+            top:-2px;
+
+            border-right:none;
+            border-top:none;
+            border-radius: 0 0 0 30px;
+        }
+        .box1 .child3{
+            left:-2px;
+            bottom:-2px;
+
+            border-bottom:none;
+            border-left:none;
+            border-radius:0 30px 0 0 ;
+        }
+        .box1 .child4{
+            right:-2px;
+            bottom:-2px;
+
+            border-right:none;
+            border-bottom:none;
+            border-radius:30px 0 0 0;
+        }
+        /* 优惠券 */
+        .box2{
+            width:480px;
+            height: 120px;
+            border-radius:10px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.4);
+            /* display:flex; */
+            overflow: hidden;
+        }
+        .box2 .left{
+            width:140px;
+            height: 120px;
+            line-height: 120px;
+            text-align: center;
+            font-size:32px;
+            color:#fff;
+            background-color: rgb(65,187,254);
+            border-radius: 10px 0 0 10px;
+        }
+        .box2 .right{
+            flex:1;
+            padding: 35px 15px 0 20px;
+        }
+        .box2 .right p{
+            width: 100%;
+        }
+        .box2 .right .flex span{
+            display: inline-block;
+            flex:1;
+            color:#444;
+        }
+        .box2 .right .flex em{
+            display: inline-block;
+            width:65px;
+            text-align: right;
+            font-size: 12px;
+            color:#999;
+        }
+        .box2 .right p + p{
+            padding-top:34px;
+            font-size:12px;
+            color:#999;
+        }
+        .box2 .top, .box2 .btm{
+            width:26px;
+            height: 26px;
+            background-color: #ddd;
+            border-radius:50%;
+            position:absolute;
+        }
+        .box2 .top{
+            left:126px;
+            top:-13px;
+        }
+        .box2 .btm{
+            left:126px;
+            bottom:-13px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 倒圆角 -->
+    <div class="box1 wCenter relative">
+        <div class="child1"></div>
+        <div class="child2"></div>
+        <div class="child3"></div>
+        <div class="child4"></div>
+    </div>
+
+    <!-- 优惠券 -->
+    <div class="box2 wCenter flex relative">
+        <!-- 
+            左右两个模块写法：
+            1、浮动
+            2、定位
+            3、flex
+            唯一不能用的是inline-block,inline-block不能用在相对大模块的布局
+         -->
+        <div class="left">20<span class="f12">元</span></div>
+        <div class="right">
+            <p class="flex">
+                <span>满100元可用</span>
+                <em>使用说明&gt;</em>
+            </p>
+            <p>
+                2018.08.01-2018.08.10
+            </p>
+        </div>
+        <div class="top"></div>
+        <div class="btm"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+/* 
+base.css
+@author:lvlifang
+@date:2022/10/11
+*/
+/* reset style */
+/* 并集选择器 */
+html,body{
+    /* 必须要添加，为了兼容浏览器 */
+    width:100%;
+    /* 根据布局需要，自己定要不要添加 */
+    /* height: 100%; */
+}
+body{
+    font-size:14px;
+    /* body的字体选择，需要跟ui设计师去沟通 */
+    font-family: '微软雅黑','黑体',Arial, Helvetica, sans-serif;
+}
+/* 清除浏览器中的默认样式 */
+html,body,ul,ol,li,dl,dd,dt,h1,h2,h3,h4,h5,h6,p,form,input,textarea,button,table,th,td,hr{
+    margin:0;
+    padding:0;
+}
+h1,h2,h3,h4,h5,h6,small,big,input,textarea,select{
+    font-size:100%;
+}
+/* 兼容不支持h5标签的某些低版本的浏览器 */
+header,nav,aside,main,footer,details,section,hgroup,menu,article{
+    display:block;
+}
+a{
+    outline: none;
+    text-decoration: none;
+}
+input:focus,select:focus,textarea:focus{
+    outline:none;
+}
+ul,ol,li{
+    list-style: none;
+}
+em,i,strong,b{
+    /* 这里重置一些带有自身语义的短语标签 */
+    font-style: normal;
+}
+img{border:0;}
+
+/* base style */
+.relative{
+    position:relative;
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+/* 清浮动 */
+.clearfix::after{
+    /* 
+        1、设置成块元素
+        2、必须要有content属性
+        3、高度必须是0
+        4、visibility:hidden;
+        5、清浮动
+    */
+}
+.w90{
+    width:90px;
+}
+.f12{
+    font-size:12px;
+}
+.f20{
+    font-size:20px;
+}
+.c6{color:#666;}
+.ca{
+    color:#aaa;
+}
+.c0{
+    color:#000;
+}

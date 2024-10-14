@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>currentColor</title>
+    <style>
+        .box{
+            width:100px;
+            height: 100px;
+            color:blue;
+            /* 需要：让div的边框颜色和字体颜色相同 */
+            border:1px solid currentColor;
+            /* background-color: currentColor; */
+        }
+    </style>
+</head>
+<body>
+    <!-- currentColor，让元素边框颜色和字体颜色一致。一般会运用在块元素上。
+        像是一个语法糖
+
+    -->
+    <div class="box">内容内容内容内容内容内容内容</div>
+</body>
+</html>

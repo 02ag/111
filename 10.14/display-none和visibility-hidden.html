@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display:none和visibility:hidden</title>
+    <style>
+        .div1{
+            width:200px;
+            height: 200px;
+            border: 1px solid red;
+            visibility: hidden;
+        }
+        .div2{
+            margin-top:50px;
+            width:300px;
+            height: 300px;
+            border:1px solid red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        display:none和visibility:hidden的区别：
+        在加载dom树和css树时，不加载display:none的元素，但会加载visibility:hidden的元素
+
+        给元素设置了visibility:hidden，就只是看不到了元素的样式，但是元素所占的位置依然保留，不会被其他元素占用。
+        此属性设置不会影响页面的文档流，只需重绘，不需回流；
+
+        给元素设置了display:none这后，元素不仅所有内容与样式都消息，同时所占的位置也不再保留，可以被其他元素占用。
+        此属性的设置会影响页面的文档流，既要回流又要重绘。
+     -->
+     <div class="div1"></div>
+     <div class="div2"></div>
+</body>
+</html>

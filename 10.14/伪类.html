@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类</title>
+    <style>
+        .txtarea{
+            width:100%;
+            height: 500px;
+        }
+        .ipt{
+            width:100%;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        css基础选择器的权重：
+        *（通配符） 0，标签选择器 1，类选择器（伪类选择器） 10，id选择器 100，行内样式 1000，!important 无穷大
+
+        复合选择器的权重，是每个基础选择器的权重之和： #div1 .div2 span{color:green;} 100+10+1=111 .div2 span{color:red;}
+        权重的用处： 在样式表中，权重高的样式会覆盖掉权重低的样式;
+
+        权重相等时，写在后面的样式会覆盖掉写在前面的样式；
+
+     -->
+
+     <!-- 
+        伪类：link（链接的初始状态），hover（链接鼠标滑过状态），active（鼠标按下未抬起的状态），visited（链接已被访问过的状态）
+        a:link{}
+        a:hover{}
+        a:active{}
+        a:visited{}
+        这四个状态，除了hover，其他的三个状态都是只针对a标签的；只有hover状态可以在任何一个标签上用
+
+        :focus表示元素获得光标焦点时的状态，主要用在input，textarea，这些标签上
+        :nth-child,:nth-of-type,:first-child,:last-child......
+
+      -->
+    
+
+    <!-- 
+        input 单行输入框
+        textarea是多行输入框
+
+    -->
+    <input type="text" class="ipt"><br>
+    <textarea rows="5" class="txtarea"></textarea>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本样式</title>
+    <style>
+        .text_overflow{
+            width:200px;
+            /* 当一个块元素的高度height与行高line-height相同时，文本垂直居中 */
+            height: 30px;
+            line-height: 30px;
+            border:1px solid red;
+            white-space:nowrap;
+            overflow: hidden;
+            text-overflow:ellipsis;
+        }
+        .text_overflow2{
+            /* 定宽 */
+            width:300px;
+            /* 溢出隐藏 */
+            overflow:hidden;
+            /* 改变控制元素的盒子属性为伸缩盒子box，改变盒子中内容的排列方向，控制显示的行数 */
+            display:-webkit-box;
+            -webkit-box-orient:vertical;
+            -webkit-line-clamp:2;
+            /* 省略号替代隐藏文字 */
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <!-- 文本样式：
+        color,font-size,font-family,font-style,font-weight,
+        text-aling,
+        text-decoration:line-through|overline|underline|none,
+        text-indent,text-shadow,
+        text-transform:uppercase|lowercase|capitalize,
+        word-wrap:normal|break-word
+        white-space:nowrap;(强制不换行),word-break:keep-all|break-word;
+        词间距：letter-spacing，字间距：word-spacing
+
+        一行文本溢出，用省略号代替:
+        1、定宽
+        2、强制不换行
+        3、溢出隐藏
+        4、用省略号替换隐藏文字
+
+        多行文本溢出，用省略号代替:
+        1、定宽
+        2、溢出隐藏
+        3、改变控制元素的盒子属性为伸缩盒子box，改变盒子中内容的排列方向，控制显示的行数
+        4、省略号替代隐藏文字
+
+        -webkit- 针对webkit内核浏览器，主要是chrome
+        -o- 针对欧朋浏览器
+        -ms- 针对ie浏览器
+        -moz- 针对火狐浏览器
+
+        border-radius:4px;
+        border-top-left-radius:4px;
+        border-bottom-left-radius;
+        border-top-right-radius;
+        border-bottom-right-radius;
+    -->
+    <div class="text_overflow">文本溢出，用省略号代替文本溢出，用省略号代替文本溢出，用省略号代替</div>
+    <div class="text_overflow2">
+        文本溢出，用省略号代替文本溢出，用省略号代替文本溢出，用省略号代替文本溢出，用省略号代替文本溢出，用省略号代替文本溢出，用省略号代替
+    </div>
+</body>
+</html>

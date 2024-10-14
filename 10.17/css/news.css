@@ -1,0 +1,114 @@
+/* 
+@author:lvlifang;
+@date:2022.10.17
+*/
+/* reset style */
+html,body{
+    width:100%;
+}
+body{
+    font-size:13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html,body,ul,ol,li,dl,dd,dt,h1,h2,h3,h4,h5,h6,p,form,input,textarea,button,table,th,td,hr{
+    margin:0;
+    padding:0;
+}
+h1,h2,h3,h4,h5,h6,small,big,input,textarea,select{
+    font-size:100%;
+}
+header,nav,aside,main,footer,details,section,hgroup,menu,article{
+    display:block;
+}
+a{
+    outline: none;
+    text-decoration: none;
+}
+input:focus,select:focus,textarea:focus{
+    outline:none;
+}
+ul,ol,li{
+    list-style: none;
+}
+em,i,strong,b{
+    font-style: normal;
+}
+img{border:0;}
+
+/* base style */
+.relative{
+    position:relative;
+}
+.clearfix::after{
+    content:'';
+    display: block;
+    height:0;
+    visibility: hidden;
+    clear:both;
+}
+
+/* 
+news style
+*/
+/* title */
+.wrap{
+    width:983px;
+    margin:12px auto 0;
+    border-top:2px solid #999;
+}
+.title{
+    height: 44px;
+    line-height: 44px;
+    border-bottom: 1px solid #ddd;
+}
+.title .tit{
+    font-size:22px;
+    color:#254282;
+    font-weight: bold;
+}
+.title h1 i{
+    color:#888;
+}
+.title h1 em{
+    display: inline-block;
+    width:10px;
+    height: 10px;
+    background:url(../img/icon-mark.png) no-repeat 100% 100%;
+}
+/* news list */
+/* flex 布局 */
+.imgList{
+    padding-top:10px;
+    /* display: flex; */
+    /* flex-wrap:nowrap(默认值，单行显示) */
+    /* wrap：多行显示 */
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    margin-left:-12px;
+}
+.imgList li{
+    float: left;
+    padding-top:10px;
+    margin-left:12px;
+    /* margin-right:12px; */
+}
+/* .imgList li:nth-child(5n){
+    margin-right:0;
+} */
+.imgList li img{
+    width:187px;
+    height: 125px;
+}
+.imgList li p{
+    width:177px;
+    padding:0 5px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 13px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color:#333;
+    background-color: #f6f7f8;
+}

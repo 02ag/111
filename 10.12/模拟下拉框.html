@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模拟下拉框</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            font-family:"宋体", Arial, Helvetica, sans-serif;
+            font-size:13px;
+        }
+        .wCenter{
+            margin:30px auto;
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear:both;
+        }
+        .container{
+            width:160px;
+            height: 25px;
+            border:1px solid #999;
+            border-radius:4px;
+            position:relative;
+        }
+        .container .ipt{
+            float:left;
+            width:120px;
+            height: 25px;
+            line-height: 25px;
+            padding-left:10px;
+            border: none;
+            outline:none;
+            color:#333;
+            /* input 有自己的浏览器默认字号，修改坱要在input框下修改
+             */
+            font-size:13px;
+        }
+        .container:hover .arrow{
+            line-height: 20px;
+        }
+        .container:hover .arrow span{
+            transform: rotate(180deg);
+        }
+        .container:hover ul{
+            display: block;
+        }
+        .container .arrow{
+            width:25px;
+            height: 25px;
+            line-height: 30px;
+            text-align: center;
+            float:right;
+            border-radius:0 4px 4px 0;
+            background-color: #aaa;
+        }
+        .container .arrow span{
+            display: inline-block;
+            width:0;
+            height: 0;
+            border:5px solid transparent;
+            border-top-color: #fff;
+        }
+        .container ul{
+            display: none;
+            width:160px;
+            list-style: none;
+            border: 1px solid #999;
+            border-radius:4px;
+            position:absolute;
+            left:-1px;
+            top:25px;
+        }
+        .container ul li{
+            line-height: 20px;
+            padding:0 10px;
+            font-size:13px;
+            color:green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container wCenter clearfix">
+        <input type="text" class="ipt" value="速查表快速通道">
+        <div class="arrow">
+            <span></span>
+        </div>
+        <ul>
+            <li>简介列表</li>
+            <li>属性列表</li>
+            <li>选择符列表</li>
+            <li>语法与规则列表</li>
+            <li>取值列表</li>
+            <li>单位列表</li>
+            <li>附录列表</li>
+            <li>CSS Hack列表</li>
+            <li>问题和经验列表</li>
+        </ul>
+    </div>
+</body>
+</html>

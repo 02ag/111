@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background背景图</title>
+    <style>
+        .div1, .div2{
+            display: flex;
+        }
+        .div1 > div, .div2 > div{
+            width: 300px;
+            height: 300px;
+            padding:20px;
+            margin:20px;
+            border:10px solid rgba(0,0,0, .2);
+            /* background-color: red; */
+            background-image: url(./img/1.jpg);
+            
+            /* background: url(u.gif) no-repeat; */
+            /* background-size:100% 100%; */
+        }
+        .div1 .box1{
+            background-origin: border-box;
+            background-repeat: no-repeat;
+        }
+        .div1 .box2{
+            background-origin: padding-box;
+            background-repeat: repeat;
+        }
+        .div1 .box3{
+            background-origin: content-box;
+            background-repeat: repeat-x;
+        }
+        .div2 .box4{
+            background-clip: border-box;
+            background-repeat: repeat-y;
+        }
+        .div2 .box5{
+            background-clip: padding-box;
+        }
+        .div2 .box6{
+            background-clip: content-box;
+        }
+
+        .txt{
+            width:500px;
+            height: 300px;
+
+            /* color:transparent;字体颜色设置透明 */
+            font-size: 100px;
+            text-align: center;
+            color:transparent;
+            background: url(u.gif) no-repeat center center;
+            background-size: 100% 100%;
+            -webkit-background-clip: text;
+            /* 
+                需要注意的：在用background-clip: text;属性的时候，必须要给color添加透明样式，让color透明了，才能实现这个效果。
+                另外，属性需要添加-webkit-前缀
+            */
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 
+        背景设置：背景色（background-color）,背景图(background-image),背景图的重复(background-repeat),背景图的大小(background-size)，背景图的位置(background-position),背景图/色从哪元素的哪里开始渲染(backgorund-origin\backgorund-clip)
+        background:color,img,repeat,position;
+        background-size:
+        background-origin/clip
+        
+     -->
+     <!-- 
+        background-repeat:no-repeat|repeat;如果不设置默认重复。
+
+        background-size,单独写，不放在background属性里面合并。
+        background-size: 100px(x轴的长度) 100px（主轴的长度）;两个长度值一样时可以缩写成一个值，但是这个方法基本不用，不同的浏览器解析出来的不一样。
+
+
+        如果不设置background-origin/clip，默认背景是从边框开始；
+
+        background-origin:border-box,padding-box,content-box;
+        background-clip:border-box,padding-box,content-box, text(目前只有webkit内核的浏览器支持，所以写的时候需要加上前缀);
+      -->
+    <div class="div1">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+    <div class="div2">
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+    </div>
+    <div class="txt">text</div>
+</body>
+</html>
