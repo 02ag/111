@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滤镜和渐变</title>
+    <style>
+        .wrap{
+            margin: 30px auto;
+            width: 1500px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .wrap img{
+            margin-left:10px;
+            margin-top:10px;
+            width:290px;
+            height: 200px;
+        }
+        .wrap img:nth-child(1){
+            filter: blur(5px);
+        }
+        .wrap img:nth-child(2){
+            filter:brightness(30%)
+        }
+        .wrap img:nth-child(3){
+            filter: contrast(90%);
+        }
+        .wrap img:nth-child(4){
+            filter: drop-shadow(0 0 4px red);
+        }
+        .wrap img:nth-child(5){
+            filter: grayscale(50%);
+        }
+        .wrap img:nth-child(6){
+            filter: hue-rotate(90deg);
+        }
+        .wrap img:nth-child(7){
+            filter: invert(100%);
+        }
+        .wrap img:nth-child(8){
+            filter: opacity(0.65);
+        }
+        .wrap img:nth-child(9){
+            filter: saturate(0.6);
+        }
+        .wrap img:nth-child(10){
+            filter: sepia(100%);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+        滤镜和渐变：
+        filter:blur(px)|brightness()|contrast()|drop-shadow()|grayscale()|hue-rotate(deg)|invert()|opacity()|saturate()|sepia()
+        blur(4px)，括号里填写模糊半径
+        brightness(30%),明亮度 0-100%， 0时，全黑；100%时，图像无变化，大于100%时，图像会比原来更亮
+        contrast()对比度 0--100%，0时全黑，100%无变化，大于100%对比度更低。
+        drop-shadow(x,y,blur,color)给图片阴影效果
+        filter:grayscale() 0--100%;如果没有设置值，默认是0；0无变化；100%，灰色
+        hue-rotate(deg)色相反转
+        invert(0-100%),反转输入图像；0无变化 ，100%，完全反转
+        opacity() 透明度
+        saturate() 饱和度 0--100%。
+        sepia() 将图像转成深褐色 0 --100%
+     -->
+    <div class="wrap">
+        <img src="./img/img2.jpg" alt="">
+        <img src="./img/img3.jpeg" alt="">
+        <img src="./img/img4.jpeg" alt="">
+        <img src="./img/img2.jpg" alt="">
+        <img src="./img/img3.jpeg" alt="">
+        <img src="./img/img4.jpeg" alt="">
+        <img src="./img/img2.jpg" alt="">
+        <img src="./img/img3.jpeg" alt="">
+        <img src="./img/img4.jpeg" alt="">
+        <img src="./img/img2.jpg" alt="">
+    </div>
+</body>
+</html>

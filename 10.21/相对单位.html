@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相对单位02</title>
+    <style>
+        html{
+            font-size: 10px;
+        }
+        body{
+            font-size: 0.14rem;
+        }
+        div{
+            font-size: 2rem; /* font-size:20px */
+            /* text-indent: 2em; */
+            text-indent:4rem;
+
+        }
+        div span{
+            /* 100 */
+            /* font-size: 5em; */
+            display: inline-block;
+            /* 100*10 */
+            width:10em;
+            /* 100*5 */
+            height: 5em;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        相对单位em,rem;vh/vw
+        em，主要是继承父节点的font-size值(离自己最近的font-size值)
+
+        关于节点：dom节点，文本节点
+
+        浏览器的默认字号是16px，最小能够显示的字号的12px；
+        所以，如果页面上没有给任何标签设置font-size值，1em=16px；
+
+    -->
+    <div id="dom"><span>相</span>相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容相对单位的内容</div>
+
+
+
+    <!-- 
+        rem： r(root) + em ,以根节点（html）的font-size为基准的相对单位
+        如果html的font-size=12px；那么页面中所有的rem都有一个换算工式：1rem = 12px；也就是说1rem就是1倍的html标签的font-size值。
+
+        html的font-size值可以用js动态设置；也就是说，根据页面的宽度来动态设置font-size值，比例以ui设计给的效果图为准
+
+        vw : 相对于视口的宽度，1vw 等于视口宽度的1%（总视口宽度为100vw）
+        vh : 相对于视口的高度， 1vh 等于视口高度的1%（总视口高度为100vh）
+     -->
+    <script>
+        var dom = document.getElementById('dom');
+        console.dir(dom)
+    </script>
+</body>
+</html>

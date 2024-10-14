@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-shadow</title>
+    <style>
+        .div1{
+            width:100px;
+            height: 100px;
+            background-color: rgb(223, 115, 115);
+            box-shadow: 0 0px 5px 10px pink;
+        }
+        .div2{
+            margin:20px auto;
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            background-color: blueviolet;
+            box-shadow:0 0 0 10px rgba(0,0,0,.3) inset;
+            box-shadow: 0 0 0 10px blue;
+        }
+        .div3{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: rgba(0,0,0,.3);
+            box-shadow:20px 50px 0 0 #cdd, 40px 60px 0 10px #eaa,90px 20px 0 30px #d00;
+        }
+        .div4{
+            width:400px;
+            height: 400px;
+            background-color: #fcc;
+            border-radius: 200px;
+            box-shadow: inset 0 0 0 20px #f0f, inset 0 0 0 40px #ff0, inset 0 0 0 60px #f00, inset 0 0 0 80px #fcc, inset 0 0 0 100px #e0f, inset 0 0 0 120px #0ff, inset 0 0 0 140px blue, inset 0 0 0 160px #eaa, inset 0 0 0 180px yellowgreen;
+        }
+        .div5{
+            width:500px;
+            height: 500px;
+            background-color: #000;
+            margin:50px auto;
+            border:1px solid black;
+        }
+        .div5 div{
+            margin:100px auto;
+            width:200px;
+            height: 200px;
+            border: 2px solid rgba(255,255,255, .6);
+            border-radius: 50%;
+            box-shadow: 8px 0 60px #f0f, -8px 0 60px #0ff, inset -8px 0 60px rgb(233, 115, 241), inset 8px 0 60px #0ff, 0 0 10px #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        box-shadow 直译：盒子阴影；css存在盒模型，所以这个box-shadow的阴影就是针对盒模型的
+        语法：box-shadow:x y blur spread color position;
+        x,y:x为正值向右偏移，为负值向左偏移；y为正值向下偏移，为负值向上偏移。
+        blur：模糊半径，值越大，边角越不锋利，阴影越朦胧；不允许出现负值，负值等同于0。
+        spread：表示阴影的大小；当值为正时，阴影会向四周（上下左右四个方向+spread值）扩大；当值为负时，阴影会收缩，会小于元素尺寸。
+        color：阴影颜色
+        position：表示阴影的位置 inset;
+
+        多个阴影的设置：由逗号分隔。
+        box-shadow:0 0 0 10px red, 120px 0 0 20px blue;
+    -->
+
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+    <div class="div4"></div>
+    <div class="div5">
+        <div></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画</title>
+    <style>
+        .div1{
+            width:100px;
+            height: 100px;
+            background-color: red;
+            animation: a 2s 2;
+        }
+        /* 定义动画 */
+        @keyframes a {
+            0%{
+                width:100px;
+                height: 100px;
+                background-color: red;
+            }
+            25%{
+                background-color: yellow;
+                width:200px;
+                height: 200px;
+            }
+            50%{
+                background-color: green;
+                width:300px;
+                height: 300px;
+            }
+            75%{
+                background-color: blue;
+                width: 200px;
+                height: 200px;
+            }
+            100%{
+                background-color: blueviolet;
+                width:100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        写动画分两步：
+            1、定义动画 @keyframes 
+            2、使用动画（调用动画）
+        动画：animation: name(动画名称) duration(多久能完成动画) timing-function(动画完成的动作函数) delay(启动动画之前是否要延迟间隔) count(动画播放次数) direction(是否要反向播放动画) fill-mode(动画不播放时的状态)。
+        play-state,只能单独写，表示动画是否完成或者暂停。
+
+
+        定义动画的时候，一定要有动画名称
+        @keyframes name {
+            0%{}
+            50%{}
+            100%{}
+        }
+     -->
+    <div class="div1"></div>
+</body>
+</html>

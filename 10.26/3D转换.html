@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D转换</title>
+    <style>
+        body{
+            /* 
+                子元素实现3D效果
+            */
+            transform-style: preserve-3d;
+            /* 景深 */
+            perspective: 400px;
+        }
+        .a,.b{
+            width:200px;
+            height: 200px;
+            position: absolute;
+            left:200px;
+            top:200px;
+            transition: all 2s;
+        }
+        .a{
+            background-color: brown;
+        }
+        .b{
+            background-color: yellow;
+        }
+        .b:hover{
+            /* 
+            rotateX(DEG)围绕x轴旋转
+            rotateY(DEG)围着Y轴旋转
+            rotateZ(DEG)围着Y轴旋转
+            */
+            transform: rotateX(90deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        3D的特点：近大远小，z方向有前有后，后面的遮挡、不可见
+        三维坐标的三个轴：
+        x轴：水平向右，右是正，左是负
+        y轴：垂直向下，下是正，上是负
+        z轴：垂直于屏幕，从内往外是正，往内是负
+
+        3D移动：transform:translate3d(x,y,z);x,y,z,不能省略，没有就写0；
+            translateX,translateY,translateZ;
+
+        3D转换：
+        transform:rotated3d(x,y,z, angle)
+        rotateX(xxdeg),rotateY(xxdeg),rotateZ(xxdeg)
+
+        3D呈现:transform-style:preserve-3d;
+        控制子元素是否开启3D空间；
+        这个代码给父元素写，但影响的是子元素。
+    -->    
+    <div class="a"></div>
+    <div class="b"></div>
+</body>
+</html>

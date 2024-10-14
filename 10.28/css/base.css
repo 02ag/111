@@ -1,0 +1,91 @@
+/* 
+@author:lvlifang
+@date:2022/10/13
+*/
+/* reset style */
+html,body{
+    width:100%;
+}
+html{
+    font-size: 10px;
+}
+body{
+    font-size:12px;
+    color:#333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html,body,ul,ol,li,dl,dd,dt,h1,h2,h3,h4,h5,h6,p,form,input,textarea,button,table,th,td,hr{
+    margin:0;
+    padding:0;
+}
+h1,h2,h3,h4,h5,h6,small,big,input,textarea,select{
+    font-size:100%;
+    font-weight: normal;
+}
+header,nav,aside,main,footer,details,section,hgroup,menu,article{
+    display:block;
+}
+a{
+    outline: none;
+    text-decoration: none;
+}
+input:focus,select:focus,textarea:focus{
+    outline:none;
+}
+ul,ol,li{
+    list-style: none;
+}
+em,i,strong,b,del{
+    font-style: normal;
+}
+img{border:0;}
+
+/* base style */
+.relative{
+    position:relative;
+}
+.clearfix::after{
+    content:'';
+    display: block;
+    height:0;
+    visibility: hidden;
+    clear:both;
+}
+.ellipsis{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.wrap, .content{
+    width:1220px;
+    margin:0 auto;
+}
+.i,.topnav_right > div .box::after{
+    background-image: url(./../img/icons.png);
+    background-repeat: no-repeat;
+}
+.c_orange{
+    color:#FF5921;
+}
+.c_green{
+    color:#0cb46a;
+}
+.c_gray6{
+    color:#666;
+}
+.c_ea{
+    color:#eaeaea;
+}
+.pt30{
+    padding-top:30px;
+}
+.chkbox{
+    /* border:1 */
+    outline:none;
+    vertical-align: middle;
+    margin-top:-2px;
+}
+.mr15{
+    margin-right:15px;
+}
+

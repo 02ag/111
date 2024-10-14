@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局</title>
+    <style>
+        .flex{
+            margin:50px auto;
+            border: 1px solid rebeccapurple;
+            width: 1000px;
+            height: 200px;
+            display: flex;
+            justify-content: space-between;
+            /* justify-content: space-around;
+            justify-content: space-evenly; */
+            flex-wrap:wrap;
+            align-items: stretch;
+        }
+        .flex > div{
+            flex: 1;
+            width:150px;
+            height: auto;
+            /* flex-grow: 1; */
+            border: 1px solid red;
+        }
+        .flex > div:nth-child(10){
+            order: -1;
+        }
+        .flex > div:nth-child(1){
+            order: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        平时我们用的比较多的布局方式：
+        浮动+定位
+        宽度百分比做自适应
+        响应式布局
+        flex布局
+
+        弹性布局（flex布局）
+        flex：flexible box,弹性布局，用来为盒模型提供布局的灵活性。
+        可以给任何一个容器指定为flex布局。
+        display:-webkit-flex;
+        display:flex;
+
+        注意：如果一个盒子设置flex布局，子元素【float、clear，vertical-align属性都将失效】。
+
+        flex布局的基本概念：
+            div.box>div.item
+            设置display:flex的元素，我们叫容器，
+            它的所有子元素做为容器成员，称为flex项目，简称：项目。
+            容器默认存在两根轴：水平的主轴和垂直的交叉轴（侧轴）
+
+        容器属性（写在父元素上）：
+        1、flex-direction:row|row-reverse|column|column-reverse
+            容器里的项目【默认】就是沿着主轴从左往右排布
+            row:默认值，从左到右
+            row-reverse:从右到左
+            column:从上到下
+            column-reverse:从下到上
+        
+        2、justify-content(这个属性的目的主就是为了排列主轴上项目的位置)
+            flex-start(默认值)：左对齐
+            flex-end：右对齐
+            center：居中
+            space-between：每个[项目]之间的距离相等，最左边一个与最后边一个的两端对齐
+            space-around:每个【项目】之间距离相等，最左与最后距边框的距离是中间项目间距的二分之一
+            space-evenly:每个【项目】之间距离相等，最左与最后距边框的距离与中间项目间距也相等。
+        3、align-items:项目在交叉轴（侧轴）的对齐方式
+            flex-start:上对齐
+            flex-end：下对齐
+            center：居中对齐
+            baseline：基准线对齐 
+            stretch:如果项目未设置高度或设为auto，将占满整个容器的高度。
+
+        4、flex-wrap: nowrap(默认值，一行排列，从左到右)｜wrap（多行排列，从左到右）｜wrap-reverse(多行，先排最后一行，再一行一行向上排)
+
+        5、align-content:flex-star|flx-end|center|space-between|space-evenly|space-around
+
+        6、flex-flow:flex-direction,flex-wrap简写
+        flex-flow：row wrap;(水平排列，多行显示)
+
+        项目属性（item 属性）
+        1、order,可以写正值，负值，0；默认值是0
+            值越小排列越靠前
+        2、flex-grow，项目可以按比例分配父元素剩余的空间。属性值是数字，必须是非负数，默认是0；
+        3、flex，设置子元素的分配空间
+
+    -->
+    <div class="flex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+    </div>
+    <div class="flex">
+        <div style="flex:2">1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

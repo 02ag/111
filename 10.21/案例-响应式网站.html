@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式网站</title>
+    <style>
+        .wrap{
+            border:1px solid black;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .wrap div{
+            margin:20px;
+        }
+        @media screen and (min-width:1681px) {
+            .wrap{
+                width:1800px;
+                border-color:blue;
+            }
+            .wrap div{
+                width:460px;
+                height: 600px;
+                background-color: blue;
+            }
+        }
+        @media screen and (max-width:1680px) {
+            .wrap{
+                width:1600px;
+                border-color:green;
+            }
+            .wrap div{
+                width: 400px;
+                height: 580px;
+                background-color: green;
+            }
+        }
+        @media screen and (max-width:1460px) {
+            .wrap{
+                width:1400px;
+                border-color:yellowgreen;
+            }
+            .wrap div{
+                width:360px;
+                height: 480px;
+                background-color: yellowgreen;
+            }
+        }
+        @media screen and (max-width:1280px) {
+            .wrap{
+                width:1200px;
+                border-color:yellow;
+            }
+            .wrap div{
+                width:300px;
+                height: 460px;
+                background-color: yellow;
+            }
+        }
+        @media screen and (min-width:769px) and (max-width:1024px) {
+            .wrap{
+                width:1000px;
+                border-color:orange;
+            }
+            .wrap div{
+                width:251px;
+                height: 380px;
+                background-color: orange;
+            }
+        }
+        @media screen and (max-width:768px) {
+            .wrap{
+                width:600px;
+                border-color:red;
+            }
+            .wrap div{
+                width:200px;
+                height: 360px;
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        响应式网站要求：
+        外部：
+        内部的小模块
+        0-768px  w：h = 200：360 边框和背景颜色：红    width：600
+        769-1024   w:h = 251:380 border和background:orenge  1000
+        1025-1280 w:h = 300:460  yellow    1200
+        1281-1460 w:h = 360:480 green     1400
+        1461-1680 w:h = 400:580 yellowgreen    1600
+        1681---   w:h = 460:600 blue   1800
+
+     -->
+    <div class="wrap">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
